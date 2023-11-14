@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shree Krishna Padawali</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amita&family=Arya&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d74f12bccc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url("https://media.istockphoto.com/id/1346789574/vector/abstract-neutral-background-white-geometric-mosaic-smooth-triangular-wallpaper-minimal.jpg?s=612x612&w=0&k=20&c=kdgQJIUDRT9VzBbfrva_FoKd5XdGRds1_bYVznegQLI=");
+        color: #333;
+        margin: 10px 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+      header {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #banshi_topnav_image {
+        margin: 0px;
+        margin-top: -30px;
+        width: 275px;
+        height: 150px;
+      }
+
+      #topnav_tag {
+        margin-left: 65px;
+        margin-top: -120px;
+        font-family: "Amita", cursive;
+        font-size: 24px;
+        color: #ffffff;
+      }
+      #topnav_moto {
+        position: relative;
+        top: 20px;
+        font-size: 14px;
+        font-style: italic;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #34495e;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 500;
+      }
+      nav a {
+        color: #ecf0f1;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      nav a:hover {
+        background-color: #2c3e50;
+      }
+      #active {
+        background-color: #2c3e50;
+      }
+
+      .main-content {
+        padding: 6em 5em;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .circle-image {
+        width: 300px;
+        height: 300px;
+        background-color: #fff;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 5em;
+        margin-bottom: 5em;
+        box-shadow: 0 4px 8px #ccc;
+      }
+
+      .circle-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .para-section {
+        max-width: 600px;
+        background-image: linear-gradient(200deg, #f4b3bc, #ffdde1);
+        padding: 2em;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px #ddd;
+        margin-top: 5em;
+        margin-bottom: 10em;
+      }
+      .para-section p {
+        color: #055096;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      footer {
+        background-image: url("https://cdn.shopify.com/s/files/1/0565/7431/2643/files/background.jpg?v=1641291483");
+        color: #000;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-section {
+        flex: 1;
+        margin: 20px;
+        margin-right: 30px;
+      }
+
+      h2 {
+        color: #3d9970;
+      }
+
+      .newsletter {
+        max-width: 300px;
+      }
+
+      .subscribe-form {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .subscribe-input {
+        flex: 1;
+        padding: 10px;
+        border: 0;
+        font-family: "Arial", sans-serif;
+      }
+      .subscribe-input:focus {
+        outline: 0;
+      }
+
+      .subscribe-button {
+        background-color: #3d9970;
+        color: white;
+        padding: 11px 20px;
+        border: none;
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+      }
+
+      .subscribe-button:hover {
+        background-color: #2ecc71;
+      }
+
+      .social-icons {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-icons li {
+        margin: 0 10px;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+        color: #333;
+        font-size: 28px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .social-icons a:hover {
+        color: #e67e22;
+      }
+
+      .copyright {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding-right: 30px;
+        }
+        #banshi_topnav_image {
+          margin-top: -10px;
+          width: 200px;
+          height: 100px;
+        }
+
+        #topnav_tag {
+          margin-left: 50px;
+          margin-top: -85px;
+          font-size: 18px;
+        }
+        #topnav_moto {
+          left: 10px;
+          font-size: 10px;
+        }
+        nav {
+          flex-direction: column;
+          align-items: center;
+          position: unset;
+        }
+        h1 {
+          font-size: 22px;
+        }
+
+        nav a {
+          margin: 2px 0;
+        }
+
+        .circle-image {
+          min-width: 200px;
+          height: 200px;
+          background-color: #fff;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-right: 0em;
+          margin-bottom: 3em;
+          box-shadow: 0 4px 8px #ccc;
+        }
+
+        .circle-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .para-section {
+          min-width: 270px;
+          background-image: linear-gradient(200deg, #f4b3bc, #ffdde1);
+          padding: 0.5em;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px #ddd;
+          margin-top: 0em;
+          margin-bottom: 2em;
+        }
+        .para-section p {
+          color: #055096;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        footer {
+          padding: 10px 0;
+        }
+
+        .footer-section {
+          margin-bottom: 0;
+          flex: 1;
+        }
+        .footer-section p {
+          font-size: 14px;
+        }
+
+        .footer-section h2 {
+          font-size: 18px;
+        }
+
+        .newsletter {
+          max-width: 280px;
+          margin-right: 0px;
+        }
+
+        .subscribe-input {
+          width: 90px;
+          padding: 8px;
+        }
+
+        .subscribe-button {
+          font-size: 14px;
+          padding: 8px 12px;
+        }
+
+        .social-icons {
+          margin-top: 5px;
+        }
+
+        .social-icons a {
+          font-size: 22px;
+        }
+
+        .copyright {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <img
+          src="./images/banshi-header-removebg-preview.png"
+          id="banshi_topnav_image"
+        />
+        <p id="topnav_tag">श्री कृष्ण पदावली</p>
+        <p id="topnav_moto">Your Divine Journey Begins Here</p>
+      </header>
+      <nav>
+        <a href="index.html" id="active">Home</a>
+        <a href="bhakti-pad.html">Bhakti Pad</a>
+        <a href="bhajan-sangrah.html">Bhajan Sangrah</a>
+        <a href="prem-sarita.html">Prem Sarita</a>
+        <a href="daily-activities.html">Daily Activities</a>
+        <a href="temp.html">temp</a>
+      </nav>
+
+      <div class="main-content">
+        <div class="circle-image">
+          <img
+            src="https://media.istockphoto.com/id/1054775834/photo/lord-krishna-with-radha.jpg?s=612x612&w=0&k=20&c=0Yq8I4HYxy4q9zoN-m0eqhuCVUgX1EJ3dg1mxJXZjcE="
+            alt="Krishna Image"
+          />
+        </div>
+
+        <div class="para-section">
+          <p>
+            Immerse yourself in the reflective wisdom of our devotional
+            thoughts. These contemplative pieces are designed to inspire
+            introspection and offer guidance on incorporating spiritual
+            principles into your daily life. Let the profound insights guide you
+            on your spiritual journey.
+          </p>
+        </div>
+
+        <div class="para-section">
+          <p>
+            Whether you seek daily quotes to uplift your spirit, wish to dive
+            into the depth of bhajans, or explore the essence of devotion with
+            Bhakti Pad, Krishna Padawali is your sanctuary for meaningful and
+            soulful experiences.
+          </p>
+        </div>
+
+        <div class="circle-image">
+          <img
+            src="https://media.istockphoto.com/id/1224777691/photo/close-up-of-wall-art-of-indian-hindu-god-krishna-playing-bansuri-or-musical-instrument.jpg?s=612x612&w=0&k=20&c=qQyvK4DnMg6XacuuRV8GhqyHvxb6wu6sS4BDjsTcW-g="
+            alt="Krishna Image"
+          />
+        </div>
+
+        <div class="circle-image">
+          <img
+            src="https://media.istockphoto.com/id/823905498/photo/lord-krishna.jpg?s=612x612&w=0&k=20&c=i8vZnau57w5vOjSFAPc19apXMcl-lr7ubPt2dzU6NQg="
+            alt="Krishna Image"
+          />
+        </div>
+
+        <div class="para-section">
+          <p>
+            Dive into the transcendental realm with our curated collection of
+            bhajans, each note resonating with the divine energy of Krishna.
+            These soul-stirring melodies have been carefully selected to elevate
+            your spiritual experience and foster a deeper connection with the
+            divine. Begin your journey now and let the divine energy of Krishna
+            guide your path.
+          </p>
+        </div>
+
+        <div class="para-section">
+          <p>
+            Delve into the timeless wisdom found in the sacred scriptures
+            related to Lord Krishna. Explore the teachings of the Bhagavad Gita,
+            the Srimad Bhagavatam, and other revered texts that provide profound
+            insights into the nature of existence, dharma, and the path to
+            spiritual enlightenment.
+          </p>
+        </div>
+
+        <div class="circle-image">
+          <img
+            src="https://media.istockphoto.com/id/1324241126/photo/radha-krishna-statue.jpg?s=612x612&w=0&k=20&c=7ZHhyG92A0LvvUU9ID04xVAEGR6kHky1UNgEoLygzKQ="
+            alt="Krishna Image"
+          />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section contact-info">
+          <h2>Contact Us</h2>
+          <p>Email: info@krishnapadawali.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h2>Newsletter</h2>
+          <p>Subscribe to receive divine updates and inspiration.</p>
+          <div class="subscribe-form">
+            <input
+              type="email"
+              class="subscribe-input"
+              placeholder="Enter your email"
+            />
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h2>Connect with Us</h2>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-codepen"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © 2023 Krishna Padawali by Vishal. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>

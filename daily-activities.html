@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily activities</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amita&family=Arya&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d74f12bccc.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* CSS styles for the page */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 10px 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+
+      main {
+        background: url("https://media.istockphoto.com/id/1463411494/vector/horizontal-banner-with-peacock-feathers-luxury-and-beautiful-decoration-design-for-text.jpg?s=612x612&w=0&k=20&c=S1tUyN4eGmf0tBSw9kSul5f45c6LU2P4dHtx6r_p_iA=")
+          center/cover no-repeat fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding: 80px 0px;
+      }
+
+      header {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #banshi_topnav_image {
+        margin: 0px;
+        margin-top: -30px;
+        width: 275px;
+        height: 150px;
+      }
+
+      #topnav_tag {
+        margin-left: 65px;
+        margin-top: -120px;
+        font-family: "Amita", cursive;
+        font-size: 24px;
+        color: #ffffff;
+      }
+      #topnav_moto {
+        position: relative;
+        top: 20px;
+        font-size: 14px;
+        font-style: italic;
+        color: #fff;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #34495e;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 500;
+      }
+      nav a {
+        color: #ecf0f1;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      nav a:hover {
+        background-color: #2c3e50;
+      }
+      #active {
+        background-color: #2c3e50;
+      }
+
+      footer {
+        background-image: url("https://cdn.shopify.com/s/files/1/0565/7431/2643/files/background.jpg?v=1641291483");
+        color: #000;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-section {
+        flex: 1;
+        margin: 20px;
+        margin-right: 30px;
+      }
+
+      h2 {
+        color: #3d9970;
+      }
+
+      .newsletter {
+        max-width: 300px;
+      }
+
+      .subscribe-form {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .subscribe-input {
+        flex: 1;
+        padding: 10px;
+        border: 0;
+        font-family: "Arial", sans-serif;
+      }
+      .subscribe-input:focus {
+        outline: 0;
+      }
+
+      .subscribe-button {
+        background-color: #3d9970;
+        color: white;
+        padding: 11px 20px;
+        border: none;
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+      }
+
+      .subscribe-button:hover {
+        background-color: #2ecc71;
+      }
+
+      .social-icons {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-icons li {
+        margin: 0 10px;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+        color: #333;
+        font-size: 28px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .social-icons a:hover {
+        color: #e67e22;
+      }
+
+      .copyright {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      .section {
+        max-width: 80%;
+        margin: 10px 20px;
+        margin-bottom: 70px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #3498db;
+      }
+
+      p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      main button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1em;
+        border: none;
+        border-radius: 4px;
+        background: linear-gradient(269deg, #0048ff, #0096ff);
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #translateBtn {
+        background: #ff4742;
+        border: 1px solid #ff4742;
+        border-radius: 6px;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        outline: 0;
+        padding: 7px 20px;
+        text-align: center;
+      }
+
+      #translateBtn:hover,
+      #translateBtn:active {
+        background-color: initial;
+        background-position: 0 0;
+        color: #ff4742;
+      }
+
+      #translateBtn:active {
+        opacity: 0.5;
+      }
+
+      .fun-facts,
+      .quiz-time {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .fun-fact,
+      .quiz-item {
+        flex-basis: 45%;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+      .quiz-item {
+        background: url("https://media.istockphoto.com/id/1046544350/photo/abstract-blurred-simple-beige-and-tan-color-background-with-white-light-effect-for-design-as.jpg?s=612x612&w=0&k=20&c=SfRa-13dAwqh5fDRgh_obrLTJVAPzI1vU8kPK3skc18=");
+        opacity: 0.8;
+      }
+      .quiz-item p {
+        color: #000;
+      }
+      .quiz-item input {
+        padding: 10px;
+        outline: 0;
+        border: 0;
+      }
+      .quiz-item input:focus {
+        outline: 0;
+        border: 2px solid #ff4742;
+        box-shadow: 0px 2px 8px #fb5d57;
+      }
+
+      .fun-fact {
+        background-image: linear-gradient(
+          95.2deg,
+          rgba(173, 252, 234, 1) 26.8%,
+          rgba(192, 229, 246, 1) 64%
+        );
+      }
+      .describe {
+        color: #000;
+      }
+
+      @media screen and (max-width: 768px) {
+        main {
+          padding: 50px 10px;
+        }
+        .describe {
+          text-align: center;
+        }
+        header {
+          padding-right: 30px;
+        }
+        #banshi_topnav_image {
+          margin-top: -10px;
+          width: 200px;
+          height: 100px;
+        }
+
+        #topnav_tag {
+          margin-left: 50px;
+          margin-top: -85px;
+          font-size: 18px;
+        }
+        #topnav_moto {
+          left: 10px;
+          font-size: 10px;
+        }
+        nav {
+          flex-direction: column;
+          align-items: center;
+          position: unset;
+        }
+        h1 {
+          font-size: 22px;
+        }
+
+        nav a {
+          margin: 2px 0;
+        }
+
+        h1 {
+          font-size: 1.5em;
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-size: 1em;
+        }
+
+        main button {
+          padding: 8px 16px;
+          font-size: 0.9em;
+        }
+        .section {
+          max-width: 94% !important;
+          margin: 0px;
+          margin-bottom: 50px;
+          padding: 0px 10px 15px;
+        }
+        #translateBtn {
+          padding: 6px 12px !important;
+        }
+        .section button {
+          padding: 8px 12px !important;
+        }
+
+        .quiz-time,
+        .fun-facts {
+          padding: 5px;
+        }
+
+        .fun-fact,
+        .quiz-item {
+          flex-basis: 100%;
+          padding: 0 8px;
+        }
+
+        .answerDiv {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+        }
+
+        .quiz-item input {
+          padding: 8px;
+          width: 50%;
+        }
+
+        .answerDiv button {
+          margin: 0;
+        }
+
+        footer {
+          padding: 10px 0;
+        }
+
+        .footer-section {
+          margin-bottom: 0;
+          flex: 1;
+        }
+        .footer-section p {
+          font-size: 14px;
+        }
+
+        .footer-section h2 {
+          font-size: 18px;
+        }
+
+        .newsletter {
+          max-width: 280px;
+          margin-right: 0px;
+        }
+
+        .subscribe-input {
+          width: 90px;
+          padding: 8px;
+        }
+
+        .subscribe-button {
+          font-size: 14px;
+          padding: 8px 12px;
+        }
+
+        .social-icons {
+          margin-top: 5px;
+        }
+
+        .social-icons a {
+          font-size: 22px;
+        }
+
+        .copyright {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="./images/banshi-header-removebg-preview.png"
+        id="banshi_topnav_image"
+      />
+      <p id="topnav_tag">श्री कृष्ण पदावली</p>
+      <p id="topnav_moto">Your Divine Journey Begins Here</p>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="bhakti-pad.html">Bhakti Pad</a>
+      <a href="bhajan-sangrah.html">Bhajan Sangrah</a>
+      <a href="prem-sarita.html">Prem Sarita</a>
+      <a href="daily-activities.html" id="active">Daily Activities</a>
+      <a href="temp.html">temp</a>
+    </nav>
+    <main>
+      <p class="describe">Enjoy these inspiring quotes that uplift your day!</p>
+      <div class="section">
+        <h1>Daily Quotes</h1>
+        <p id="quoteText">
+          "Wisdom is not a product of schooling but of the lifelong attempt to
+          acquire it."
+        </p>
+        <p id="author">- Albert Einstein</p>
+        <button id="translateBtn" onclick="toggleTranslation()">
+          हिंदी में पढ़ें
+        </button>
+        <button onclick="generateQuote()">Generate New Quote</button>
+      </div>
+
+      <p class="describe">
+        Discover fascinating fun facts related to devotional themes!
+      </p>
+      <div class="section fun-facts">
+        <h1>Fun Facts</h1>
+        <div class="fun-fact">
+          <p>Did you know? The Bhagavad Gita consists of 700 verses.</p>
+        </div>
+        <div class="fun-fact">
+          <p>
+            Lord Krishna is often depicted with a peacock feather on his head.
+          </p>
+        </div>
+        <!-- Add more fun facts as needed -->
+      </div>
+      <p class="describe">Test your knowledge with our Devotional Quiz!</p>
+      <div class="section quiz-time">
+        <h1>Quiz Time</h1>
+        <div class="quiz-item">
+          <p>What is the name of Lord Krishna's divine flute?</p>
+          <div class="answerDiv">
+            <input type="text" id="answer1" placeholder="Your Answer" />
+            <button onclick="checkAnswer('answer1', 'Bansuri')">Submit</button>
+          </div>
+          <p class="answer-feedback" id="answerFeedback1"></p>
+        </div>
+        <div class="quiz-item">
+          <p>Which epic contains the teachings of Lord Krishna to Arjuna?</p>
+          <div class="answerDiv">
+            <input type="text" id="answer2" placeholder="Your Answer" />
+            <button onclick="checkAnswer('answer2', 'Bhagavad Gita')">
+              Submit
+            </button>
+          </div>
+          <p class="answer-feedback" id="answerFeedback2"></p>
+        </div>
+        <!-- Add more quiz questions as needed -->
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section contact-info">
+          <h2>Contact Us</h2>
+          <p>Email: info@krishnapadawali.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h2>Newsletter</h2>
+          <p>Subscribe to receive divine updates and inspiration.</p>
+          <div class="subscribe-form">
+            <input
+              type="email"
+              class="subscribe-input"
+              placeholder="Enter your email"
+            />
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h2>Connect with Us</h2>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-codepen"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © 2023 Krishna Padawali by Vishal. All rights reserved.
+      </p>
+    </footer>
+    <script>
+      const quotes = [
+        {
+          text: "Wisdom is not a product of schooling but of the lifelong attempt to acquire it.",
+          author: "Albert Einstein",
+          hindiText:
+            "ज्ञान स्कूली शिक्षा का उत्पाद नहीं है, बल्कि इसे प्राप्त करने का एक जीवन-लंबी कोशिश है।",
+          hindiAuthor: "अल्बर्ट आइंस्टीन",
+        },
+        {
+          text: "The only way to do great work is to love what you do.",
+          author: "Steve Jobs",
+          hindiText:
+            "महान काम करने का एकमात्र तरीका वह काम पसंद करना है जो आप कर रहे हैं।",
+          hindiAuthor: "स्टीव जॉब्स",
+        },
+        // Add more quotes with Hindi translations as needed
+      ];
+
+      let isTranslated = false;
+
+      function toggleTranslation() {
+        const translateBtn = document.getElementById("translateBtn");
+        const quoteText = document.getElementById("quoteText");
+        const authorText = document.getElementById("author");
+
+        isTranslated = !isTranslated;
+
+        if (isTranslated) {
+          translateBtn.textContent = "Read in English";
+          quoteText.textContent = quotes[currentIndex].hindiText;
+          authorText.textContent = `- ${quotes[currentIndex].hindiAuthor}`;
+        } else {
+          translateBtn.textContent = "Read in Hindi";
+          quoteText.textContent = quotes[currentIndex].text;
+          authorText.textContent = `- ${quotes[currentIndex].author}`;
+        }
+      }
+
+      let currentIndex = 0;
+
+      function generateQuote() {
+        currentIndex = Math.floor(Math.random() * quotes.length);
+
+        const quoteText = document.getElementById("quoteText");
+        const authorText = document.getElementById("author");
+
+        if (isTranslated) {
+          quoteText.textContent = quotes[currentIndex].hindiText;
+          authorText.textContent = `- ${quotes[currentIndex].hindiAuthor}`;
+        } else {
+          quoteText.textContent = quotes[currentIndex].text;
+          authorText.textContent = `- ${quotes[currentIndex].author}`;
+        }
+      }
+
+      window.onload = generateQuote;
+
+      // Function to check user's answers
+      function checkAnswer(inputId, correctAnswer) {
+        const userInput = document
+          .getElementById(inputId)
+          .value.trim()
+          .toLowerCase();
+        const feedbackId = `answerFeedback${inputId.slice(-1)}`; // Extracting feedback ID dynamically
+
+        const feedbackElement = document.getElementById(feedbackId);
+
+        if (userInput === correctAnswer.toLowerCase()) {
+          feedbackElement.textContent = "Correct answer!";
+          feedbackElement.style.color = "green";
+        } else {
+          feedbackElement.textContent = "Incorrect answer. Try again!";
+          feedbackElement.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>
