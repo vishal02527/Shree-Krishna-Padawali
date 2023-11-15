@@ -140,7 +140,7 @@ function showPad(padId) {
     default:
       padDisplay.innerHTML = `
             <h2>Selected Pad</h2>
-            <p>Select a pad from the list on the left side to display here.</p>
+            <p>Select a pad from the list to display here.</p>
           `;
   }
 
