@@ -22,7 +22,10 @@
         box-sizing: border-box;
         overflow-x: hidden;
       }
-      p::selection, h2::selection, label::selection, .default-message::selection {
+      p::selection,
+      h2::selection,
+      label::selection,
+      .default-message::selection {
         background-color: #fae2b5;
         color: #333;
       }
@@ -120,11 +123,12 @@
 
       .bhajan h2 {
         color: #e74c3c;
-        margin-bottom: 10px;
+        margin-bottom: 40px;
       }
 
       .bhajan p {
         color: #555;
+        line-height: 0.7;
       }
 
       .default-message {
@@ -368,27 +372,69 @@
         <label for="bhajanDropdown">Select Bhajan:</label>
         <select id="bhajanDropdown" onchange="showBhajan()">
           <option value="default">Select a Bhajan</option>
-          <option value="bhajan1">Bhajan Title 1</option>
-          <option value="bhajan2">Bhajan Title 2</option>
+          <option value="bhajan1">मैं देख रही कब से बाट</option>
+          <option value="bhajan2">भजो राधे गोविंद! गोविंद राधे!</option>
           <!-- Add more options as needed -->
         </select>
       </div>
 
       <div class="bhajan-container">
         <div class="bhajan" id="bhajan1">
-          <h2>Bhajan Title 1</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          <h2>मैं देख रही कब से बाट</h2>
+          <p>मैं देख रही कब से बाट</p>
+          <p>कहो क्या बात हुई</p>
+          <p>हो मेरा अब तक ना थाम हाथ</p>
+          <p>कहो क्या बात हुई</p>
+          <p>मैं देख रही कब से बाट</p>
+          <p>कहो क्या बात हुई।</p>
+          <br />
+          <p>पल पल बीते दिल घबरावे</p>
+          <p>हरि को मेरी सुध नहीं आवे</p>
+          <p>कहीं ना प्राण निकल तन जावे</p>
+          <p>हो मेरे आए न प्राणनाथ</p>
+          <p>कहो क्या बात हुई</p>
+          <p>मैं देख रही कब से बाट</p>
+          <p>कहो क्या बात हुई।</p>
+          <br />
+          <p>कब यह नैना पावें चैना</p>
+          <p>हरि दरस बिन पीड़ मिटें ना</p>
+          <p>बीत गए कई दिन कई रैना</p>
+          <p>लेकिन पिया नहीं मेरे साथ</p>
+          <p>कहो क्या बात हुई</p>
+          <p>मैं देख रही कब से बाट</p>
+          <p>कहो क्या बात हुई।</p>
+          <br />
+          <p>जिया न लागे बिन तुम्हारे</p>
+          <p>आए कैसे दिन हमारे</p>
+          <p>हम अभागे वियोग के मारे</p>
+          <p>हो कैसा यह लगा आघात कहो क्या बात हुई</p>
+          <p>मैं देख रही कब से बाट</p>
+          <p>कहो क्या बात हुई।</p>
         </div>
 
         <div class="bhajan" id="bhajan2">
-          <h2>Bhajan Title 2</h2>
-          <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
-          </p>
+          <h2>भजो राधे गोविंद! गोविंद राधे!</h2>
+          <p>भजो राधे गोविंद! गोविंद राधे!</p>
+          <br />
+          <p>भजन केशव माधव बनवारी</p>
+          <p>भजो श्याम मोहन गिरिवर धारी</p>
+          <p>भजो राधे गोविंद! गोविंद राधे!</p>
+          <br />
+          <p>भजो राधा हृदय स्वामिनी</p>
+          <p>भजो लाडली श्यामा ब्रजरानी</p>
+          <p>भजो राधे गोविंद! गोविंद राधे!</p>
+          <br />
+          <p>भजो मुरलीधर मुकुंद गोपाला</p>
+          <p>भजो हरे कृष्ण दीन दयाला</p>
+          <p>भजो राधे गोविंद! गोविंद राधे!</p>
+          <br />
+          <p>भजो राधा राधा गोविंद प्यारी</p>
+          <p>भजो किशोरी ब्रजराज बिहारी</p>
+          <p>भजो राधे गोविंद! गोविंद राधे!</p>
+          <br />
+          <p>भजो राधावल्लभ जगत के स्वामी</p>
+          <p>भजो राधारमण हरि अंतर्यामी</p>
+          <p>भजो राधे गोविंद! गोविंद राधे!</p>
         </div>
 
         <!-- Add more bhajans as needed -->
