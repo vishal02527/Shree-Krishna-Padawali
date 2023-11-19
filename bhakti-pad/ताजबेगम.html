@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ताजबेगम</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amita&family=Arya&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d74f12bccc.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url("https://media.istockphoto.com/id/1346789574/vector/abstract-neutral-background-white-geometric-mosaic-smooth-triangular-wallpaper-minimal.jpg?s=612x612&w=0&k=20&c=kdgQJIUDRT9VzBbfrva_FoKd5XdGRds1_bYVznegQLI=");
+        color: #333;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+      p::selection,
+      h2::selection,
+      h1::selection,
+      li::selection {
+        background-color: #fae2b5;
+        color: #333;
+      }
+      header {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #banshi_topnav_image {
+        margin: 0px;
+        margin-top: -30px;
+        width: 275px;
+        height: 150px;
+      }
+
+      #topnav_tag {
+        margin-left: 65px;
+        margin-top: -120px;
+        font-family: "Amita", cursive;
+        font-size: 24px;
+        color: #ffffff;
+      }
+      #topnav_moto {
+        position: relative;
+        top: 20px;
+        font-size: 14px;
+        font-style: italic;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #34495e;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 500;
+      }
+      nav a {
+        color: #ecf0f1;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      nav a:hover {
+        background-color: #2c3e50;
+      }
+      #active {
+        background-color: #2c3e50;
+      }
+
+      .topDiv ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .topDiv ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      .topDiv ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .topDiv ul li a:hover {
+        color: #0048ff;
+      }
+
+      .topDiv {
+        background: linear-gradient(90deg, #f4c366 0%, #f2cf8e 30%);
+        padding: 5px 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .topDiv h1 {
+        color: #ffffff;
+        margin: 0;
+      }
+
+      main {
+        padding: 100px 200px;
+      }
+      section {
+        margin-bottom: 80px;
+      }
+
+      .imageDiv {
+        text-align: center;
+      }
+
+      .imageDiv img {
+        width: 350px;
+        height: 300px;
+      }
+
+      section p {
+        letter-spacing: 0.7px;
+        word-spacing: 0.2px;
+        line-height: 1.5;
+      }
+
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgb(198, 225, 251);
+        box-shadow: 0px 4px 8px #ccc;
+      }
+
+      .nav-bar {
+        width: 30%;
+        height: 520px;
+        background-image: linear-gradient(#2193b0, #6dd5ed);
+        padding: 10px 20px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow-y: scroll;
+      }
+
+      .nav-bar h2 {
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .nav-bar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .nav-bar li {
+        margin-bottom: 15px;
+        cursor: pointer;
+        font-size: 18px;
+        color: #ecf0f1;
+        transition: all 0.3s;
+      }
+
+      .nav-bar li.active {
+        color: #f39c12;
+        background-color: #fff;
+        border-radius: 40px;
+        padding: 5px 8px;
+      }
+
+      .nav-bar li:hover {
+        color: #f39c12;
+        background-color: #fff;
+        border-radius: 40px;
+        padding: 5px 8px;
+      }
+
+      .pad-card {
+        width: 55%;
+        height: 520px;
+        padding: 0px 100px 20px;
+        background-image: url("https://media.istockphoto.com/id/1346789574/vector/abstract-neutral-background-white-geometric-mosaic-smooth-triangular-wallpaper-minimal.jpg?s=612x612&w=0&k=20&c=kdgQJIUDRT9VzBbfrva_FoKd5XdGRds1_bYVznegQLI=");
+        overflow-y: scroll;
+      }
+
+      .pad-card h2 {
+        color: #e67e22;
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .pad-card p {
+        font-style: italic;
+        color: #333;
+        font-size: 18px;
+        margin-bottom: -10px;
+      }
+
+      footer {
+        background-image: url("https://cdn.shopify.com/s/files/1/0565/7431/2643/files/background.jpg?v=1641291483");
+        color: #000;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-section {
+        flex: 1;
+        margin: 20px;
+        margin-right: 30px;
+      }
+
+      .footer-section h2 {
+        color: #3d9970;
+      }
+
+      .newsletter {
+        max-width: 300px;
+      }
+
+      .subscribe-form {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .subscribe-input {
+        flex: 1;
+        padding: 10px;
+        border: 0;
+        font-family: "Arial", sans-serif;
+      }
+      .subscribe-input:focus {
+        outline: 0;
+      }
+
+      .subscribe-button {
+        background-color: #3d9970;
+        color: white;
+        padding: 11px 20px;
+        border: none;
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+      }
+
+      .subscribe-button:hover {
+        background-color: #2ecc71;
+      }
+
+      .social-icons {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-icons li {
+        margin: 0 10px;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+        color: #333;
+        font-size: 28px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .social-icons a:hover {
+        color: #e67e22;
+      }
+
+      .copyright {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding-right: 30px;
+        }
+        #banshi_topnav_image {
+          margin-top: -10px;
+          width: 200px;
+          height: 100px;
+        }
+
+        #topnav_tag {
+          margin-left: 50px;
+          margin-top: -85px;
+          font-size: 18px;
+        }
+        #topnav_moto {
+          left: 10px;
+          font-size: 10px;
+        }
+        nav {
+          flex-direction: column;
+          align-items: center;
+          position: unset;
+        }
+        h1 {
+          font-size: 22px;
+        }
+
+        nav a {
+          margin: 2px 0;
+        }
+
+        .topDiv ul li {
+          margin-right: 10px;
+        }
+
+        .topDiv ul li a {
+          font-size: 14px;
+        }
+
+        .topDiv {
+          padding: 5px 10px 8px;
+          margin: 0;
+        }
+        .topDiv h1 {
+          font-size: 20px;
+        }
+
+        main {
+          padding: 40px 20px;
+        }
+
+        section {
+          margin-bottom: 40px;
+        }
+
+        .imageDiv img {
+          width: 200px;
+          height: 170px;
+        }
+
+        section p {
+          font-size: 14px;
+          letter-spacing: 0.5px;
+          word-spacing: 0px;
+        }
+
+        .navigation {
+          flex-direction: column;
+        }
+
+        .nav-bar {
+          width: 90%;
+          height: 400px;
+          margin-bottom: 10px;
+        }
+        .nav-bar li {
+          font-size: 16px;
+        }
+
+        .pad-card {
+          width: 90%;
+          height: 400px;
+          padding: 10px 20px;
+        }
+
+        .pad-card h2 {
+          font-size: 22px;
+        }
+
+        .pad-card p {
+          color: #333;
+          font-size: 16px;
+          margin-bottom: -8px;
+        }
+
+        footer {
+          padding: 10px 0;
+        }
+
+        .footer-section {
+          margin-bottom: 0;
+          flex: 1;
+        }
+        .footer-section p {
+          font-size: 14px;
+        }
+
+        .footer-section h2 {
+          font-size: 18px;
+        }
+
+        .newsletter {
+          max-width: 280px;
+          margin-left: 40px;
+        }
+
+        .subscribe-input {
+          width: 90px;
+          padding: 8px;
+        }
+
+        .subscribe-button {
+          font-size: 14px;
+          padding: 8px 12px;
+        }
+
+        .social-icons {
+          margin-top: 5px;
+        }
+
+        .social-icons a {
+          font-size: 22px;
+        }
+
+        .copyright {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="../images/banshi-header-removebg-preview.png"
+        id="banshi_topnav_image"
+      />
+      <p id="topnav_tag">श्री कृष्ण पदावली</p>
+      <p id="topnav_moto">Your Divine Journey Begins Here</p>
+    </header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../bhakti-pad.html" id="active">Bhakti Pad</a>
+      <a href="../bhajan-sangrah.html">Bhajan Sangrah</a>
+      <a href="../prem-sarita.html">Prem Sarita</a>
+      <a href="../daily-activities.html">Daily Activities</a>
+    </nav>
+    <div class="topDiv">
+      <h1>ताजबेगम</h1>
+      <ul>
+        <li><a href="#introduction">परिचय</a></li>
+        <li><a href="#journey">जीवनी</a></li>
+        <li><a href="#creation">रचनाएँ </a></li>
+      </ul>
+    </div>
+    <main>
+      <section>
+        <div class="imageDiv">
+          <img src="../images/tajbegum.jpeg" alt="ताजबेगम" />
+        </div>
+      </section>
+
+      <section>
+        <div id="introduction" class="section-container">
+          <h2>परिचय</h2>
+          <p>
+            ताजबेगम, मुग़ल सम्राट शाहजहाँ की दूसरी पत्नी और अकबर की पोती थीं।
+            उनका जन्म ۱६२२ में आगरा में हुआ था। वे गहरे संस्कारों और शैली के लिए
+            प्रसिद्ध थीं और उन्होंने अपने कार्यों से सम्राटी ताजमहल की निर्माण
+            के समय में महत्त्वपूर्ण भूमिका निभाई।
+          </p>
+          <p>
+            ताजबेगम अदायगी में कविता, संगीत, और रसोई कला में माहिर थीं। उनकी
+            संगीत और कविताएँ मुग़ल सम्राज्य की संस्कृति में एक महत्त्वपूर्ण
+            स्थान रखती हैं। उन्होंने अपनी कला में उच्च स्तर पर मान्यता हासिल की
+            थी और उनकी रचनाएँ सम्राटी ताजमहल के निर्माण के समय में इस्तेमाल हुई
+            थीं।
+          </p>
+          <p>
+            उनकी शैली और रचनाओं में गहरा संस्कृतिक प्रभाव दिखाई गया था और
+            उन्होंने अपने समय में ग़ज़लें, गीत, और कविताओं की श्रेष्ठ कलाकार
+            बनाया।
+          </p>
+        </div>
+        <div id="journey" class="section-container">
+          <h2>जीवनी</h2>
+          <p>
+            ताजबेगम का जन्म मुग़ल सम्राट शाहजहाँ की पत्नी मुमताज़ महल के वंशजों
+            में हुआ था। उन्होंने अपने जीवन को कला और संस्कृति में समर्पित किया।
+            उन्होंने अपने कला की माहिरी से सम्राटी ताजमहल की निर्माण में भी
+            महत्त्वपूर्ण योगदान दिया।
+          </p>
+          <p>
+            ताजबेगम की विशेषता उनकी रचनात्मक प्रतिभा में थी, जो उन्हें ग़ज़लें,
+            गीत, और कविताओं का श्रेष्ठ कलाकार बनाती थी। उनकी कविताएँ और संगीत
+            मुग़ल सम्राटी के दरबार में बहुत प्रसिद्ध थीं और उन्हें 'नूर जहाँ की
+            बेगम' के नाम से भी जाना जाता था।
+          </p>
+          <p>
+            ताजबेगम ने अपने समय में कविता, संगीत, और रसोई कला में अपनी विशेष
+            पहचान बनाई। उनकी रचनाएँ मुग़ल संस्कृति की धरोहर हैं और उनका योगदान
+            आज भी सम्मानित है।
+          </p>
+          <p>
+            उन्होंने अपने जीवन के दौरान सम्राट शाहजहाँ की समर्थ साथी के रूप में
+            भी बड़ी भूमिका निभाई। उनका प्रेम और समर्थन सम्राट के साथ उनकी
+            संस्कृति को और भी मजबूत बनाता था।
+          </p>
+        </div>
+      </section>
+
+      <section id="creation">
+        <h2>रचनाएँ</h2>
+        <div class="navigation">
+          <div class="nav-bar" id="quoteList">
+            <ul>
+              <li data-pad="pad1" onclick="showPad('pad1')">सुनो दिल जानी</li>
+              <li data-pad="pad2" onclick="showPad('pad2')">
+                छैल जो छबीला, सब रंग में रंगीला
+              </li>
+              <li data-pad="pad3" onclick="showPad('pad3')">
+                अब शरअ नहीं मेरे कुछ काम की
+              </li>
+              <li data-pad="pad4" onclick="showPad('pad4')">
+                अल्ला बिस्मिल्ला रहमान औ रहीमी छोड़
+              </li>
+            </ul>
+          </div>
+          <div class="pad-card" id="padDisplay">
+            <h2>Selected Pad</h2>
+            <p>Select a pad from the list to display here.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section contact-info">
+          <h2>Contact Us</h2>
+          <p>Email: info@krishnapadawali.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h2>Newsletter</h2>
+          <p>Subscribe to receive divine updates and inspiration.</p>
+          <div class="subscribe-form">
+            <input
+              type="email"
+              class="subscribe-input"
+              placeholder="Enter your email"
+            />
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h2>Connect with Us</h2>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-codepen"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © 2023 Krishna Padawali by Vishal. All rights reserved.
+      </p>
+    </footer>
+    <script>
+      function showPad(padId) {
+        var padDisplay = document.getElementById("padDisplay");
+        var listItems = document.querySelectorAll(".nav-bar li");
+
+        // Remove the 'active' class from all list items
+        listItems.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        switch (padId) {
+          case "pad1":
+            padDisplay.innerHTML = `
+              <h2>सुनो दिल जानी</h2>
+              <p>मेरे दिल की कहानी तुम,</p>
+              <p>दस्त ही बिकानी,</p>
+              <p>बदनामी भी सहूंगी मैं</p>
+              <p>देवपूजा ठानी मैं, नमाज हूँ भुलानी,</p>
+              <p>तजे कलमा-कुरान साड़े</p>
+              <p>गुननि गहूंगी मैं</p>
+              <p>नन्द के कुमार, कुरबान तेरी सुरत पै,</p>
+              <p>हूँ तो मुगलानी, हिंदुआनी बन रहूंगी मैं ।</p>
+
+            `;
+            break;
+          case "pad2":
+            padDisplay.innerHTML = `
+              <h2>छैल जो छबीला, सब रंग में रंगीला</h2>
+              <p>छैल जो छबीला, सब रंग में रंगीला</p>
+              <p>बड़ा चित्त का अड़ीला, कहूँ देवतों से न्यारा है</p>
+              <p>माल गले सोहै, नाक-मोती सेत जो है</p>
+              <p>कान, कुण्डल मन मोहै, लाल मुकुट सिर धारा है</p>
+              <p>दुष्टजन मारे, सब संत जो उबारे</p> 
+              <p>ताज चित्त में निहारे प्रन, प्रीति करन वारा है</p>
+              <p>नन्दजू का प्यारा, जिन कंस को पछारा,</p>
+              <p>वह वृन्दावन वारा, कृष्ण साहेब हमारा है ।</p>
+
+            `;
+            break;
+          case "pad3":
+            padDisplay.innerHTML = `
+              <h2>अब शरअ नहीं मेरे कुछ काम की</h2>
+              <p>अब शरअ नहीं मेरे कुछ काम की</p>
+              <p>श्याम मेरे हैं, मैं मेरे श्याम की</p> 
+              <p>बृज में अब धूनी रमा ली जायेगी,</p>
+              <p>जब लगन हरि से लगा ली जायेगी ।</p>
+
+            `;
+            break;
+          case "pad4":
+            padDisplay.innerHTML = `
+              <h2>अल्ला बिस्मिल्ला रहमान औ रहीमी छोड़</h2>
+              <p>अल्ला बिस्मिल्ला रहमान औ रहीमी छोड़</p>
+              <p>पुर वो शहीदों की चर्चा चलाऊँगी</p>
+              <p>सूथना उतार, पहन घाघरा घुमावदार,</p>
+              <p>फ़रिया को फार शीश चुनरी चढ़ाऊंगी</p> 
+              <p>कहत है ताज कृष्ण सों पैजकर,</p>
+              <p>वृन्दावन छोड़ अब कितहूँ न जाउंगी</p> 
+              <p>बांदी बनूंगी महारानी राधा जू की,</p>
+              <p>तुर्कनी बहाय नाम गोपिका कहाउंगी ।</p>
+            `;
+            break;
+          default:
+            padDisplay.innerHTML = `
+              <h2>Selected Pad</h2>
+              <p>Select a pad from the list to display here.</p>
+            `;
+        }
+
+        // Add the 'active' class to the selected list item
+        var selectedListItem = document.querySelector(
+          `.nav-bar li[data-pad="${padId}"]`
+        );
+        if (selectedListItem) {
+          selectedListItem.classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>
