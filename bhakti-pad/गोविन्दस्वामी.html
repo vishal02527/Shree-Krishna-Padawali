@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>गोविन्दस्वामी</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amita&family=Arya&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d74f12bccc.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url("https://media.istockphoto.com/id/1346789574/vector/abstract-neutral-background-white-geometric-mosaic-smooth-triangular-wallpaper-minimal.jpg?s=612x612&w=0&k=20&c=kdgQJIUDRT9VzBbfrva_FoKd5XdGRds1_bYVznegQLI=");
+        color: #333;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+      p::selection,
+      h2::selection,
+      h1::selection,
+      li::selection {
+        background-color: #fae2b5;
+        color: #333;
+      }
+      header {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #banshi_topnav_image {
+        margin: 0px;
+        margin-top: -30px;
+        width: 275px;
+        height: 150px;
+      }
+
+      #topnav_tag {
+        margin-left: 65px;
+        margin-top: -120px;
+        font-family: "Amita", cursive;
+        font-size: 24px;
+        color: #ffffff;
+      }
+      #topnav_moto {
+        position: relative;
+        top: 20px;
+        font-size: 14px;
+        font-style: italic;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #34495e;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 500;
+      }
+      nav a {
+        color: #ecf0f1;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      nav a:hover {
+        background-color: #2c3e50;
+      }
+      #active {
+        background-color: #2c3e50;
+      }
+
+      .topDiv ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .topDiv ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      .topDiv ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .topDiv ul li a:hover {
+        color: #0048ff;
+      }
+
+      .topDiv {
+        background: linear-gradient(90deg, #f4c366 0%, #f2cf8e 30%);
+        padding: 5px 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .topDiv h1 {
+        color: #ffffff;
+        margin: 0;
+      }
+
+      main {
+        padding: 100px 200px;
+      }
+      section {
+        margin-bottom: 80px;
+      }
+
+      .imageDiv {
+        text-align: center;
+      }
+
+      .imageDiv img {
+        width: 350px;
+        height: 300px;
+      }
+
+      section p {
+        letter-spacing: 0.7px;
+        word-spacing: 0.2px;
+        line-height: 1.5;
+      }
+
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgb(198, 225, 251);
+        box-shadow: 0px 4px 8px #ccc;
+      }
+
+      .nav-bar {
+        width: 30%;
+        height: 520px;
+        background-image: linear-gradient(#2193b0, #6dd5ed);
+        padding: 10px 20px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow-y: scroll;
+      }
+
+      .nav-bar h2 {
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .nav-bar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .nav-bar li {
+        margin-bottom: 15px;
+        cursor: pointer;
+        font-size: 18px;
+        color: #ecf0f1;
+        transition: all 0.3s;
+      }
+
+      .nav-bar li.active {
+        color: #f39c12;
+        background-color: #fff;
+        border-radius: 40px;
+        padding: 5px 8px;
+      }
+
+      .nav-bar li:hover {
+        color: #f39c12;
+        background-color: #fff;
+        border-radius: 40px;
+        padding: 5px 8px;
+      }
+
+      .pad-card {
+        width: 55%;
+        height: 520px;
+        padding: 0px 100px 20px;
+        background-image: url("https://media.istockphoto.com/id/1346789574/vector/abstract-neutral-background-white-geometric-mosaic-smooth-triangular-wallpaper-minimal.jpg?s=612x612&w=0&k=20&c=kdgQJIUDRT9VzBbfrva_FoKd5XdGRds1_bYVznegQLI=");
+        overflow-y: scroll;
+      }
+
+      .pad-card h2 {
+        color: #e67e22;
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .pad-card p {
+        font-style: italic;
+        color: #333;
+        font-size: 18px;
+        margin-bottom: -10px;
+      }
+
+      footer {
+        background-image: url("https://cdn.shopify.com/s/files/1/0565/7431/2643/files/background.jpg?v=1641291483");
+        color: #000;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-section {
+        flex: 1;
+        margin: 20px;
+        margin-right: 30px;
+      }
+
+      .footer-section h2 {
+        color: #3d9970;
+      }
+
+      .newsletter {
+        max-width: 300px;
+      }
+
+      .subscribe-form {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .subscribe-input {
+        flex: 1;
+        padding: 10px;
+        border: 0;
+        font-family: "Arial", sans-serif;
+      }
+      .subscribe-input:focus {
+        outline: 0;
+      }
+
+      .subscribe-button {
+        background-color: #3d9970;
+        color: white;
+        padding: 11px 20px;
+        border: none;
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+      }
+
+      .subscribe-button:hover {
+        background-color: #2ecc71;
+      }
+
+      .social-icons {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-icons li {
+        margin: 0 10px;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+        color: #333;
+        font-size: 28px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .social-icons a:hover {
+        color: #e67e22;
+      }
+
+      .copyright {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding-right: 30px;
+        }
+        #banshi_topnav_image {
+          margin-top: -10px;
+          width: 200px;
+          height: 100px;
+        }
+
+        #topnav_tag {
+          margin-left: 50px;
+          margin-top: -85px;
+          font-size: 18px;
+        }
+        #topnav_moto {
+          left: 10px;
+          font-size: 10px;
+        }
+        nav {
+          flex-direction: column;
+          align-items: center;
+          position: unset;
+        }
+        h1 {
+          font-size: 22px;
+        }
+
+        nav a {
+          margin: 2px 0;
+        }
+
+        .topDiv ul li {
+          margin-right: 10px;
+        }
+
+        .topDiv ul li a {
+          font-size: 14px;
+        }
+
+        .topDiv {
+          padding: 5px 10px 8px;
+          margin: 0;
+        }
+        .topDiv h1 {
+          font-size: 20px;
+        }
+
+        main {
+          padding: 40px 20px;
+        }
+
+        section {
+          margin-bottom: 40px;
+        }
+
+        .imageDiv img {
+          width: 200px;
+          height: 170px;
+        }
+
+        section p {
+          font-size: 14px;
+          letter-spacing: 0.5px;
+          word-spacing: 0px;
+        }
+
+        .navigation {
+          flex-direction: column;
+        }
+
+        .nav-bar {
+          width: 90%;
+          height: 400px;
+          margin-bottom: 10px;
+        }
+        .nav-bar li {
+          font-size: 16px;
+        }
+
+        .pad-card {
+          width: 90%;
+          height: 400px;
+          padding: 10px 20px;
+        }
+
+        .pad-card h2 {
+          font-size: 22px;
+        }
+
+        .pad-card p {
+          color: #333;
+          font-size: 16px;
+          margin-bottom: -8px;
+        }
+
+        footer {
+          padding: 10px 0;
+        }
+
+        .footer-section {
+          margin-bottom: 0;
+          flex: 1;
+        }
+        .footer-section p {
+          font-size: 14px;
+        }
+
+        .footer-section h2 {
+          font-size: 18px;
+        }
+
+        .newsletter {
+          max-width: 280px;
+          margin-left: 25px;
+        }
+
+        .subscribe-input {
+          width: 90px;
+          padding: 8px;
+        }
+
+        .subscribe-button {
+          font-size: 14px;
+          padding: 8px 12px;
+        }
+
+        .social-icons {
+          margin-top: 5px;
+        }
+
+        .social-icons a {
+          font-size: 22px;
+        }
+
+        .copyright {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="../images/banshi-header-removebg-preview.png"
+        id="banshi_topnav_image"
+      />
+      <p id="topnav_tag">श्री कृष्ण पदावली</p>
+      <p id="topnav_moto">Your Divine Journey Begins Here</p>
+    </header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../bhakti-pad.html" id="active">Bhakti Pad</a>
+      <a href="../bhajan-sangrah.html">Bhajan Sangrah</a>
+      <a href="../prem-sarita.html">Prem Sarita</a>
+      <a href="../daily-activities.html">Daily Activities</a>
+    </nav>
+    <div class="topDiv">
+      <h1>गोविन्दस्वामी</h1>
+      <ul>
+        <li><a href="#introduction">परिचय</a></li>
+        <li><a href="#journey">जीवनी</a></li>
+        <li><a href="#creation">रचनाएँ </a></li>
+      </ul>
+    </div>
+    <main>
+      <section>
+        <div class="imageDiv">
+          <img src="../images/govindswami.jpeg" alt="गोविन्दस्वामी" />
+        </div>
+      </section>
+
+      <section>
+        <div id="introduction" class="section-container">
+          <h2>परिचय</h2>
+          <p>
+            गोविन्दस्वामी एक प्रमुख भारतीय संत थे, जो भक्ति और आत्मानुभूति के
+            माध्यम से मानवता के लिए संदेश प्रस्तुत करते रहे। उनका जन्म सन् 1537
+            में मध्य प्रदेश के चिंचलवाडा गाँव में हुआ था। उन्होंने जीवन में
+            साधना, ध्यान, और भक्ति में अपना समय बिताया और अपने शिष्यों को ध्यान
+            के माध्यम से आत्मानुभूति की ओर प्रोत्साहित किया।
+          </p>
+          <p>
+            गोविन्दस्वामी के ग्रंथों में भारतीय धर्म, दर्शन, और संस्कृति के
+            महत्त्वपूर्ण तत्त्व हैं। उनकी रचनाएँ धर्मिक ज्ञान को सरलता से समझाने
+            का कार्य करती हैं और साधना, आत्मानुभूति, और जीवन के उच्च आदर्शों को
+            प्रस्तुत करती हैं।
+          </p>
+          <p>
+            गोविन्दस्वामी ने अपने ग्रंथों में जीवन, मृत्यु, और मानवीय सम्बन्धों
+            के विषय में भी गहरा ज्ञान साझा किया। उनकी रचनाएँ आज भी भक्ति मार्ग
+            पर चलने वाले लोगों को मार्गदर्शन करती हैं।
+          </p>
+        </div>
+        <div id="journey" class="section-container">
+          <h2>जीवनी</h2>
+          <p>
+            गोविन्दस्वामी के जीवन का व्यक्तिगत परिचय विविध ग्रंथों और संप्रदायों
+            के अनुसार भिन्न है। उनका जन्म छत्तीसगढ़ के एक गाँव में हुआ था।
+            उन्होंने अपने जीवन को भक्ति मार्ग पर समर्पित किया और संतों के समान
+            समाज की सेवा की।
+          </p>
+          <p>
+            गोविन्दस्वामी की रचनाएँ भक्ति, ध्यान, और आत्मानुभूति के उच्च आदर्शों
+            को प्रस्तुत करती हैं। उनके ग्रंथों में मानवता, सामाजिक न्याय, और
+            धर्म के महत्त्वपूर्ण सिद्धांत हैं जो समय के साथ भी मानव जीवन को
+            प्रेरित करते हैं।
+          </p>
+          <p>
+            गोविन्दस्वामी की शिक्षाएँ और उनकी भक्ति से भरी रचनाएँ आज भी उनके
+            अनुयायियों के द्वारा मानी और प्राचीनतम धार्मिक ग्रंथों में समाहित की
+            जाती हैं।
+          </p>
+        </div>
+      </section>
+
+      <section id="creation">
+        <h2>रचनाएँ</h2>
+        <div class="navigation">
+          <div class="nav-bar" id="quoteList">
+            <ul>
+              <li data-pad="pad1" onclick="showPad('pad1')">
+                आजु बधाई नंदमहरि घर
+              </li>
+              <li data-pad="pad2" onclick="showPad('pad2')">
+                अब मोहि सोवन दे री माइ
+              </li>
+              <li data-pad="pad3" onclick="showPad('pad3')">
+                देख सखि बरसन लाग्यो सावन
+              </li>
+              <li data-pad="pad4" onclick="showPad('pad4')">
+                गोविंद चले चरावन धेनु
+              </li>
+              <li data-pad="pad5" onclick="showPad('pad5')">
+                देखो माई इत घन उत नँद लाल
+              </li>
+              <li data-pad="pad6" onclick="showPad('pad6')">
+                मो मन बसौ श्यामा-श्याम
+              </li>
+              <li data-pad="pad7" onclick="showPad('pad7')">
+                गिरिधर कौन प्रकृति तिहारी
+              </li>
+            </ul>
+          </div>
+          <div class="pad-card" id="padDisplay">
+            <h2>Selected Pad</h2>
+            <p>Select a pad from the list to display here.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section contact-info">
+          <h2>Contact Us</h2>
+          <p>Email: info@krishnapadawali.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h2>Newsletter</h2>
+          <p>Subscribe to receive divine updates and inspiration.</p>
+          <div class="subscribe-form">
+            <input
+              type="email"
+              class="subscribe-input"
+              placeholder="Enter your email"
+            />
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h2>Connect with Us</h2>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-codepen"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © 2023 Krishna Padawali by Vishal. All rights reserved.
+      </p>
+    </footer>
+    <script>
+      function showPad(padId) {
+        var padDisplay = document.getElementById("padDisplay");
+        var listItems = document.querySelectorAll(".nav-bar li");
+
+        // Remove the 'active' class from all list items
+        listItems.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        switch (padId) {
+          case "pad1":
+            padDisplay.innerHTML = `
+              <h2>आजु बधाई नंदमहरि घर</h2>
+              <p>आजु बधाई नंदमहरि घर</p>
+              <p>जसुमति रानी कूख सिरानी प्रगट भए गिरिवरधर</p>
+              <p>गोपी ग्वाल नाचत गावत सब छिरकत हरद दही आनंद भर</p>
+              <p>उमह्यो गोकुलराइ भवन में देखत स्याम सुंदरवर</p>
+              <p>नंद उदार अपार दान दे भूपन बसन हाटक जु धेनु धर</p>
+              <p>'गोविंद' को इह मांग्यो दीजे निरखों ललना पलना पर ।</p>
+            `;
+            break;
+          case "pad2":
+            padDisplay.innerHTML = `
+              <h2>अब मोहि सोवन दे री माइ</h2>
+              <p>अब मोहि सोवन दे री माइ</p>
+              <p>गाइन के संग डोलत बन-बन दूखत मेरे पाँइ</p>
+              <p>सांझ ही तें नैन मेरे नींद पैठी आइ</p>
+              <p>नेंक मेरी पल न उघरत कछु न खायो जाइ</p>
+              <p>प्रात उठि हौं करों कलेऊ फिर चराऊँ तेरी गाँइ</p>
+              <p>'गोविंद' प्रभु बलि जाइ जननी लिये कंठ लगाइ ।</p>
+            `;
+            break;
+          case "pad3":
+            padDisplay.innerHTML = `
+              <h2>देख सखि बरसन लाग्यो सावन</h2>
+              <p>देख सखि बरसन लाग्यो सावन</p>
+              <p>गरजत गगन दामिनी चमकत रिझै लेहु मनभावन</p>
+              <p>नाचत मोर रसिक मदमाते कोयल पिक बोलत हैं रिझावन</p>
+              <p>चहुँदिसि राग मलार सप्त सुर मगन भए सब गावन</p>
+              <p>सुनि राधे अब कठिन भई रितु बिनु ब्रजनाथ नाहिं सुखपावन</p>
+              <p>जाइ मिली 'गोविंद’ प्रभु कों सब विरह बिथा जु नसावन ।</p>
+            `;
+            break;
+          case "pad4":
+            padDisplay.innerHTML = `
+              <h2>गोविंद चले चरावन धेनु</h2>
+              <p>गोविंद चले चरावन धेनु</p>
+              <p>गृह गृह तें लरिका सब टेरे शृंगी मधुर बजाई बेनु</p>
+              <p>सुरभी संग सोभित द्वै भैया लटकत चलत नचावत नेंन</p>
+              <p>गोप वधू देखन सब निकसीं कियो संकेत बताई सेंन</p>
+              <p>ब्रजपति जब तें बन पाउँ धारे न परत ब्रजजन पल री चैन</p>
+              <p>तजि गृह काज विकली सी डोलत दिन अरि जाए हो एक बैन</p>
+              <p>जसोमति पाक परोसि कहति सखि तूं ले जाउ बेगि इह देंन</p>
+              <p>'गोविंद' लिए बिरहनी दौरी तलफत जैसे जल बिनु मेंन ।</p>
+            `;
+            break;
+          case "pad5":
+            padDisplay.innerHTML = `
+              <h2>देखो माई इत घन उत नँद लाल</h2>
+              <p>देखो माई इत घन उत नँद लाल</p>
+              <p>इत बादर गरजत चहुँ दिसि, उत मुरली शब्द रसाल</p>
+              <p>इत तौ राजत धनुष इंद्र कौ, उत राजत वनमाल</p>
+              <p>इत दामिनि दमकत चहुँ दिसि, उत पीत वसन गोपाल</p>
+              <p>इत धुरवा उत चित्रित हैं हरि, बरखत अमृत धार</p>
+              <p>इत बक पाँत उडत बादर में, उत मुक्ताफल हार</p>
+              <p>इत कोकिला कोलाहल कूजत, बजत किंकिणी जाल</p>
+              <p>'गोविंद प्रभु की बानिक निरखत, मोहि रहीं ब्रजबाल ।</p>
+            `;
+            break;
+          case "pad6":
+            padDisplay.innerHTML = `
+              <h2>मो मन बसौ श्यामा-श्याम</h2>
+              <p>मो मन बसौ श्यामा-श्याम</p>
+              <p>श्याम तन मन श्याम कामर, माल की मणि श्याम</p>
+              <p>श्याम अंगन श्याम भूषण, वसन हैं अति श्याम</p>
+              <p>श्याम-श्याम के प्रेम भीने, 'गोविंद जन भए श्याम ।</p>
+            `;
+            break;
+          case "pad7":
+            padDisplay.innerHTML = `
+              <h2>गिरिधर कौन प्रकृति तिहारी</h2>
+              <p>गिरिधर कौन प्रकृति तिहारी, अटपटी सघन वीथिन में</p>
+              <p>ब्रजवधू आवति जाति अव मारग में अटको</p>
+              <p>तुम तो ठाले ठूले फिरत हो जु निसि दिन हम ग्रह काज करें</p>
+              <p>कैसे बचि-बचि निकसत तोऊऽब ह्वैइ जात भटको</p>
+              <p>दान-दान करि राख्यो कोने धों दान लियो</p>
+              <p>झूठेई मारत गाल पटको</p>
+              <p>'गोविंद' प्रभू आए अनोखे नए दानी तुम</p>
+              <p>सुन री सयानी चटपट कियो मटको ।</p>
+            `;
+            break;
+          default:
+            padDisplay.innerHTML = `
+              <h2>Selected Pad</h2>
+              <p>Select a pad from the list to display here.</p>
+            `;
+        }
+
+        // Add the 'active' class to the selected list item
+        var selectedListItem = document.querySelector(
+          `.nav-bar li[data-pad="${padId}"]`
+        );
+        if (selectedListItem) {
+          selectedListItem.classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>
