@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>परमानंददास</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amita&family=Arya&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d74f12bccc.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url("https://media.istockphoto.com/id/1346789574/vector/abstract-neutral-background-white-geometric-mosaic-smooth-triangular-wallpaper-minimal.jpg?s=612x612&w=0&k=20&c=kdgQJIUDRT9VzBbfrva_FoKd5XdGRds1_bYVznegQLI=");
+        color: #333;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+      p::selection,
+      h2::selection,
+      h1::selection,
+      li::selection {
+        background-color: #fae2b5;
+        color: #333;
+      }
+      header {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #banshi_topnav_image {
+        margin: 0px;
+        margin-top: -30px;
+        width: 275px;
+        height: 150px;
+      }
+
+      #topnav_tag {
+        margin-left: 65px;
+        margin-top: -120px;
+        font-family: "Amita", cursive;
+        font-size: 24px;
+        color: #ffffff;
+      }
+      #topnav_moto {
+        position: relative;
+        top: 20px;
+        font-size: 14px;
+        font-style: italic;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #34495e;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 500;
+      }
+      nav a {
+        color: #ecf0f1;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      nav a:hover {
+        background-color: #2c3e50;
+      }
+      #active {
+        background-color: #2c3e50;
+      }
+
+      .topDiv ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .topDiv ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      .topDiv ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .topDiv ul li a:hover {
+        color: #0048ff;
+      }
+
+      .topDiv {
+        background: linear-gradient(90deg, #f4c366 0%, #f2cf8e 30%);
+        padding: 5px 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .topDiv h1 {
+        color: #ffffff;
+        margin: 0;
+      }
+
+      main {
+        padding: 100px 200px;
+      }
+      section {
+        margin-bottom: 80px;
+      }
+
+      .imageDiv {
+        text-align: center;
+      }
+
+      .imageDiv img {
+        width: 350px;
+        height: 300px;
+      }
+
+      section p {
+        letter-spacing: 0.7px;
+        word-spacing: 0.2px;
+        line-height: 1.5;
+      }
+
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgb(198, 225, 251);
+        box-shadow: 0px 4px 8px #ccc;
+      }
+
+      .nav-bar {
+        width: 30%;
+        height: 520px;
+        background-image: linear-gradient(#2193b0, #6dd5ed);
+        padding: 10px 20px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow-y: scroll;
+      }
+
+      .nav-bar h2 {
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .nav-bar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .nav-bar li {
+        margin-bottom: 15px;
+        cursor: pointer;
+        font-size: 18px;
+        color: #ecf0f1;
+        transition: all 0.3s;
+      }
+
+      .nav-bar li.active {
+        color: #f39c12;
+        background-color: #fff;
+        border-radius: 40px;
+        padding: 5px 8px;
+      }
+
+      .nav-bar li:hover {
+        color: #f39c12;
+        background-color: #fff;
+        border-radius: 40px;
+        padding: 5px 8px;
+      }
+
+      .pad-card {
+        width: 55%;
+        height: 520px;
+        padding: 0px 100px 20px;
+        background-image: url("https://media.istockphoto.com/id/1346789574/vector/abstract-neutral-background-white-geometric-mosaic-smooth-triangular-wallpaper-minimal.jpg?s=612x612&w=0&k=20&c=kdgQJIUDRT9VzBbfrva_FoKd5XdGRds1_bYVznegQLI=");
+        overflow-y: scroll;
+      }
+
+      .pad-card h2 {
+        color: #e67e22;
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .pad-card p {
+        font-style: italic;
+        color: #333;
+        font-size: 18px;
+        margin-bottom: -10px;
+      }
+
+      footer {
+        background-image: url("https://cdn.shopify.com/s/files/1/0565/7431/2643/files/background.jpg?v=1641291483");
+        color: #000;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-section {
+        flex: 1;
+        margin: 20px;
+        margin-right: 30px;
+      }
+
+      .footer-section h2 {
+        color: #3d9970;
+      }
+
+      .newsletter {
+        max-width: 300px;
+      }
+
+      .subscribe-form {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .subscribe-input {
+        flex: 1;
+        padding: 10px;
+        border: 0;
+        font-family: "Arial", sans-serif;
+      }
+      .subscribe-input:focus {
+        outline: 0;
+      }
+
+      .subscribe-button {
+        background-color: #3d9970;
+        color: white;
+        padding: 11px 20px;
+        border: none;
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+      }
+
+      .subscribe-button:hover {
+        background-color: #2ecc71;
+      }
+
+      .social-icons {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-icons li {
+        margin: 0 10px;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+        color: #333;
+        font-size: 28px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .social-icons a:hover {
+        color: #e67e22;
+      }
+
+      .copyright {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding-right: 30px;
+        }
+        #banshi_topnav_image {
+          margin-top: -10px;
+          width: 200px;
+          height: 100px;
+        }
+
+        #topnav_tag {
+          margin-left: 50px;
+          margin-top: -85px;
+          font-size: 18px;
+        }
+        #topnav_moto {
+          left: 10px;
+          font-size: 10px;
+        }
+        nav {
+          flex-direction: column;
+          align-items: center;
+          position: unset;
+        }
+        h1 {
+          font-size: 22px;
+        }
+
+        nav a {
+          margin: 2px 0;
+        }
+
+        .topDiv ul li {
+          margin-right: 10px;
+        }
+
+        .topDiv ul li a {
+          font-size: 14px;
+        }
+
+        .topDiv {
+          padding: 5px 10px 8px;
+          margin: 0;
+        }
+        .topDiv h1 {
+          font-size: 20px;
+        }
+
+        main {
+          padding: 40px 20px;
+        }
+
+        section {
+          margin-bottom: 40px;
+        }
+
+        .imageDiv img {
+          width: 200px;
+          height: 170px;
+        }
+
+        section p {
+          font-size: 14px;
+          letter-spacing: 0.5px;
+          word-spacing: 0px;
+        }
+
+        .navigation {
+          flex-direction: column;
+        }
+
+        .nav-bar {
+          width: 90%;
+          height: 400px;
+          margin-bottom: 10px;
+        }
+        .nav-bar li {
+          font-size: 16px;
+        }
+
+        .pad-card {
+          width: 90%;
+          height: 400px;
+          padding: 10px 20px;
+        }
+
+        .pad-card h2 {
+          font-size: 22px;
+        }
+
+        .pad-card p {
+          color: #333;
+          font-size: 16px;
+          margin-bottom: -8px;
+        }
+
+        footer {
+          padding: 10px 0;
+        }
+
+        .footer-section {
+          margin-bottom: 0;
+          flex: 1;
+        }
+        .footer-section p {
+          font-size: 14px;
+        }
+
+        .footer-section h2 {
+          font-size: 18px;
+        }
+
+        .newsletter {
+          max-width: 280px;
+          margin-left: 25px;
+        }
+
+        .subscribe-input {
+          width: 90px;
+          padding: 8px;
+        }
+
+        .subscribe-button {
+          font-size: 14px;
+          padding: 8px 12px;
+        }
+
+        .social-icons {
+          margin-top: 5px;
+        }
+
+        .social-icons a {
+          font-size: 22px;
+        }
+
+        .copyright {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="../images/banshi-header-removebg-preview.png"
+        id="banshi_topnav_image"
+      />
+      <p id="topnav_tag">श्री कृष्ण पदावली</p>
+      <p id="topnav_moto">Your Divine Journey Begins Here</p>
+    </header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../bhakti-pad.html" id="active">Bhakti Pad</a>
+      <a href="../bhajan-sangrah.html">Bhajan Sangrah</a>
+      <a href="../prem-sarita.html">Prem Sarita</a>
+      <a href="../daily-activities.html">Daily Activities</a>
+    </nav>
+    <div class="topDiv">
+      <h1>परमानंददास</h1>
+      <ul>
+        <li><a href="#introduction">परिचय</a></li>
+        <li><a href="#journey">जीवनी</a></li>
+        <li><a href="#creation">रचनाएँ </a></li>
+      </ul>
+    </div>
+    <main>
+      <section>
+        <div class="imageDiv">
+          <img src="../images/paramananddas.jpeg" alt="परमानंददास" />
+        </div>
+      </section>
+
+      <section>
+        <div id="introduction" class="section-container">
+          <h2>परिचय</h2>
+          <p>
+            परमानंददास, भारतीय संत और भक्तिकालीन कवि थे। उनका जन्म सन् 1484 में उत्तर प्रदेश के चित्रकूट नगर में हुआ था। परमानंददास ने अपनी कविताओं में भक्ति के ऊँचे तत्त्वों को उकेरा और समाज में सच्ची प्रेम और भगवान की उपासना को महत्त्व दिया। उनकी कविताएँ भागवत कथाओं और पौराणिक कथाओं पर आधारित थीं और उन्होंने लोगों को भगवान के प्रति अपनी अटल भक्ति का संदेश दिया।
+          </p>
+          <p>
+            परमानंददास की कविताओं में उन्होंने भक्ति और प्रेम के साथ-साथ समाज में न्याय की बात की। उन्होंने अपने काव्य में मानवता, समाजसेवा, और सच्चे धर्म के सिद्धांतों को प्रोत्साहित किया। परमानंददास की कविताएँ भारतीय संस्कृति के अनुसार ध्यान और प्रेम की महत्ता को सिद्ध करती हैं।
+          </p>
+        </div>
+        <div id="journey" class="section-container">
+          <h2>जीवनी</h2>
+          <p>
+            परमानंददास का जन्म एक ब्राह्मण परिवार में हुआ था। उनके जीवन के बारे में सटीक जानकारी मान्यताओं के द्वारा उपलब्ध नहीं है। वे संत रविदास के समकक्ष थे और उनके साथ साहित्यिक विचार-विमर्श करते थे।
+          </p>
+          <p>
+            परमानंददास की कविताओं में उन्होंने समाज में सामाजिक असमानता को उठाने का संदेश दिया और अवसरों के बराबरी का मानवाधिकार को प्रमोट किया। उनकी कविताओं में भगवान की प्रेम, भक्ति, और सामाजिक न्याय की महानता उजागर होती है।
+          </p>
+          <p>
+            परमानंददास के रचनाकारी योगदान को समाज में महत्त्वपूर्ण माना जाता है और उनकी कविताएँ आज भी भारतीय संस्कृति और साहित्य के अनमोल भंडार के रूप में जानी जाती हैं।
+          </p>
+        </div>
+      </section>
+
+      <section id="creation">
+        <h2>रचनाएँ</h2>
+        <div class="navigation">
+          <div class="nav-bar" id="quoteList">
+            <ul>
+              <li data-pad="pad1" onclick="showPad('pad1')">
+                कहा करौ बैकुंठहि जाय
+              </li>
+              <li data-pad="pad2" onclick="showPad('pad2')">
+                ब्रज के बिरही लोग बिचारे
+              </li>
+              <li data-pad="pad3" onclick="showPad('pad3')">
+                गोपी प्रेम की ध्वजा
+              </li>
+              <li data-pad="pad4" onclick="showPad('pad4')">
+                यह धन धर्म ही तें पायो
+              </li>
+              <li data-pad="pad5" onclick="showPad('pad5')">
+                मैया मोहिं ऐसी दुलहिन भावै
+              </li>
+              <li data-pad="pad6" onclick="showPad('pad6')">
+                प्रीत नंद नंदन सो कीजे
+              </li>
+            </ul>
+          </div>
+          <div class="pad-card" id="padDisplay">
+            <h2>Selected Pad</h2>
+            <p>Select a pad from the list to display here.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section contact-info">
+          <h2>Contact Us</h2>
+          <p>Email: info@krishnapadawali.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h2>Newsletter</h2>
+          <p>Subscribe to receive divine updates and inspiration.</p>
+          <div class="subscribe-form">
+            <input
+              type="email"
+              class="subscribe-input"
+              placeholder="Enter your email"
+            />
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h2>Connect with Us</h2>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-codepen"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © 2023 Krishna Padawali by Vishal. All rights reserved.
+      </p>
+    </footer>
+    <script>
+      function showPad(padId) {
+        var padDisplay = document.getElementById("padDisplay");
+        var listItems = document.querySelectorAll(".nav-bar li");
+
+        // Remove the 'active' class from all list items
+        listItems.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        switch (padId) {
+          case "pad1":
+            padDisplay.innerHTML = `
+              <h2>कहा करौ बैकुंठहि जाय</h2>
+              <p>कहा करौ बैकुंठहि जाय</p>
+              <p>जहाँ नहि नन्द जसोदा गोपी, जहाँ नहीं ग्वाल-बाल और गाय</p>
+              <p>जहाँ न जल जमुना कौ निर्मल, और नहीं कदमनि की हाय</p>
+              <p>'परमानन्द' प्रभुचतुर ग्वालिनी, बज-रज तजि मेरी जाइ बलाय ।</p>
+            `;
+            break;
+          case "pad2":
+            padDisplay.innerHTML = `
+              <h2>ब्रज के बिरही लोग बिचारे</h2>
+              <p>ब्रज के बिरही लोग बिचारे</p>
+              <p>बिन गोपाल ठगे से ठाढे अति दुरबल तन हारे</p>
+              <p>मात जसोदा पंथ निहारत निरखत साँझ सकारे</p>
+              <p>जो कोइ कान्ह-काह कहि बोलत ऍंखियन बहत पनारे</p>
+              <p>यह मथुरा काजर की रेखा जे निकसे ते कारे</p>
+              <p>'परमानंद' स्वामि बिनु ऐसे ज्यों चंदा बिनु तारे ।</p>
+            `;
+            break;
+          case "pad3":
+            padDisplay.innerHTML = `
+              <h2>गोपी प्रेम की ध्वजा</h2>
+              <p>गोपी प्रेम की ध्वजा</p>
+              <p>निज गोपाल किते अपने वश उरधर श्याम भुजा</p>
+              <p>शुक मुनि व्यास प्रशंसा कीनी ऊधो संत सराही</p>
+              <p>भुरि भाग्य गोकुल की वनिता अति पुनीत भवमांहि</p>
+              <p>कहा भयो जो विप्रकुल जनम्यो जो हरिसेवा नाही</p>
+              <p>सोई कुलीन दास परमानंद जो हरि सन्मुख धाई ।</p>
+
+            `;
+            break;
+          case "pad4":
+            padDisplay.innerHTML = `
+              <h2>यह धन धर्म ही तें पायो</h2>
+              <p>यह धन धर्म ही तें पायो</p>
+              <p>नीके राखि जसोदा मैया नारायण ब्रज आयो</p>
+              <p>जा धन को मुनि जप तप खोजत वेदहुं पार न पायो</p>
+              <p>सों धन धर्यो क्षीर सागर में ब्रह्मा जाय जगायो</p>
+              <p>जा धन तें गोकुल सुख लहियत, सगरे काज संवारे</p>
+              <p>सो धन वार वार उर अंतर, परमानंद विचारे ।</p>
+            `;
+            break;
+          case "pad5":
+            padDisplay.innerHTML = `
+              <h2>मैया मोहिं ऐसी दुलहिन भावै</h2>
+              <p>मैया मोहिं ऐसी दुलहिन भावै</p>
+              <p>का गोप की तनक ढोठिनियाँ, रुनक झुनक चलि आवै</p>
+              <p>कर-कर पाक रसाल आपने कर मोहिं परसि जिमावै</p>
+              <p>कर अंचर पट ओट बबातें, ठाढी ब्यार ढुरावै</p>
+              <p>मोहिं उठाय गोद बैठारै, करि मनुहार मनावै</p>
+              <p>अहो मेरे लाल कहो बाबा तें, तेरो ब्याह करावै</p>
+              <p>नंदराय नंदरानी देउ मिलि, मोद समुद्र बढावै</p>
+              <p>'परमानंददास को ठाकुर, बेद विमल जस गावै ।</p>
+            `;
+            break;
+            case "pad6":
+            padDisplay.innerHTML = `
+              <h2>प्रीत नंद नंदन सो कीजे</h2>
+              <p>प्रीत नंद नंदन सो कीजे</p>
+              <p>संपत्ति विपत्ति परे प्रतिपाले कृपा करे सो जीजे</p>
+              <p>परम उदार चतुर चिंतामणि सेवा सुमरन माने</p>
+              <p>हस्त कमल की छाया राखत अंतर घट की जाने</p>
+              <p>वेद पुरान श्रीभागवत भाखत कियो भक्तन मन भायो</p>
+              <p>परमानंद इंद्र सो वैभव विप्र सुदामा पायो ।</p>
+            `;
+            break;
+          default:
+            padDisplay.innerHTML = `
+              <h2>Selected Pad</h2>
+              <p>Select a pad from the list to display here.</p>
+            `;
+        }
+
+        // Add the 'active' class to the selected list item
+        var selectedListItem = document.querySelector(
+          `.nav-bar li[data-pad="${padId}"]`
+        );
+        if (selectedListItem) {
+          selectedListItem.classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>
