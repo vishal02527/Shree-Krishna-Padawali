@@ -454,7 +454,7 @@
         </div>
         <div class="fun-fact">
           <p>
-            Lord Krishna is often depicted with a peacock feather on his head.
+            The "Om" symbol represents the sound of creation and the essence of ultimate reality, encompassing the past, present, and future.
           </p>
         </div>
         <!-- Add more fun facts as needed -->
@@ -463,22 +463,42 @@
       <div class="section quiz-time">
         <h1>Quiz Time</h1>
         <div class="quiz-item">
-          <p>What is the name of Lord Krishna's divine flute?</p>
+          <p>Which sacred river is considered highly revered in Hinduism?</p>
           <div class="answerDiv">
             <input type="text" id="answer1" placeholder="Your Answer" />
-            <button onclick="checkAnswer('answer1', 'Bansuri')">Submit</button>
+            <button onclick="checkAnswer('answer1', 'Ganga')">Submit</button>
           </div>
           <p class="answer-feedback" id="answerFeedback1"></p>
         </div>
         <div class="quiz-item">
-          <p>Which epic contains the teachings of Lord Krishna to Arjuna?</p>
+          <p>Which epic poem narrates the story of Lord Rama?</p>
           <div class="answerDiv">
             <input type="text" id="answer2" placeholder="Your Answer" />
-            <button onclick="checkAnswer('answer2', 'Bhagavad Gita')">
+            <button onclick="checkAnswer('answer2', 'Ramayana')">
               Submit
             </button>
           </div>
           <p class="answer-feedback" id="answerFeedback2"></p>
+        </div>
+        <div class="quiz-item">
+          <p>What is the law of cause and effect governing actions in Hinduism?</p>
+          <div class="answerDiv">
+            <input type="text" id="answer3" placeholder="Your Answer" />
+            <button onclick="checkAnswer('answer3', 'Karma')">
+              Submit
+            </button>
+          </div>
+          <p class="answer-feedback" id="answerFeedback3"></p>
+        </div>
+        <div class="quiz-item">
+          <p>What is the name of the oldest scriptures in Hinduism?</p>
+          <div class="answerDiv">
+            <input type="text" id="answer4" placeholder="Your Answer" />
+            <button onclick="checkAnswer('answer4', 'Vedas')">
+              Submit
+            </button>
+          </div>
+          <p class="answer-feedback" id="answerFeedback4"></p>
         </div>
         <!-- Add more quiz questions as needed -->
       </div>
@@ -619,7 +639,11 @@
 
         const feedbackElement = document.getElementById(feedbackId);
 
-        if (userInput === correctAnswer.toLowerCase()) {
+        if(userInput===''){
+          feedbackElement.textContent = "Please write your answer!";
+          feedbackElement.style.color = "red";
+        }
+        else if (userInput === correctAnswer.toLowerCase()) {
           feedbackElement.textContent = "Correct answer!";
           feedbackElement.style.color = "green";
         } else {
