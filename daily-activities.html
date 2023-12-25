@@ -228,7 +228,7 @@
         opacity: 0.5;
       }
 
-      #quoteText{
+      #quoteText {
         text-align: left;
       }
 
@@ -454,7 +454,8 @@
         </div>
         <div class="fun-fact">
           <p>
-            The "Om" symbol represents the sound of creation and the essence of ultimate reality, encompassing the past, present, and future.
+            The "Om" symbol represents the sound of creation and the essence of
+            ultimate reality, encompassing the past, present, and future.
           </p>
         </div>
         <!-- Add more fun facts as needed -->
@@ -474,19 +475,17 @@
           <p>Which epic poem narrates the story of Lord Rama?</p>
           <div class="answerDiv">
             <input type="text" id="answer2" placeholder="Your Answer" />
-            <button onclick="checkAnswer('answer2', 'Ramayana')">
-              Submit
-            </button>
+            <button onclick="checkAnswer('answer2', 'Ramayana')">Submit</button>
           </div>
           <p class="answer-feedback" id="answerFeedback2"></p>
         </div>
         <div class="quiz-item">
-          <p>What is the law of cause and effect governing actions in Hinduism?</p>
+          <p>
+            What is the law of cause and effect governing actions in Hinduism?
+          </p>
           <div class="answerDiv">
             <input type="text" id="answer3" placeholder="Your Answer" />
-            <button onclick="checkAnswer('answer3', 'Karma')">
-              Submit
-            </button>
+            <button onclick="checkAnswer('answer3', 'Karma')">Submit</button>
           </div>
           <p class="answer-feedback" id="answerFeedback3"></p>
         </div>
@@ -494,9 +493,7 @@
           <p>What is the name of the oldest scriptures in Hinduism?</p>
           <div class="answerDiv">
             <input type="text" id="answer4" placeholder="Your Answer" />
-            <button onclick="checkAnswer('answer4', 'Vedas')">
-              Submit
-            </button>
+            <button onclick="checkAnswer('answer4', 'Vedas')">Submit</button>
           </div>
           <p class="answer-feedback" id="answerFeedback4"></p>
         </div>
@@ -639,11 +636,10 @@
 
         const feedbackElement = document.getElementById(feedbackId);
 
-        if(userInput===''){
+        if (userInput === "") {
           feedbackElement.textContent = "Please write your answer!";
           feedbackElement.style.color = "red";
-        }
-        else if (userInput === correctAnswer.toLowerCase()) {
+        } else if (userInput === correctAnswer.toLowerCase()) {
           feedbackElement.textContent = "Correct answer!";
           feedbackElement.style.color = "green";
         } else {
