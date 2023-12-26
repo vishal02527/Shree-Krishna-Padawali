@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>प्रियतम की डगर</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amita&family=Arya&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d74f12bccc.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url("https://media.istockphoto.com/id/1346789574/vector/abstract-neutral-background-white-geometric-mosaic-smooth-triangular-wallpaper-minimal.jpg?s=612x612&w=0&k=20&c=kdgQJIUDRT9VzBbfrva_FoKd5XdGRds1_bYVznegQLI=");
+        color: #333;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+      h1::selection,
+      p::selection {
+        background-color: #fae2b5;
+      }
+      header {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #banshi_topnav_image {
+        margin: 0px;
+        margin-top: -30px;
+        width: 275px;
+        height: 150px;
+      }
+
+      #topnav_tag {
+        margin-left: 65px;
+        margin-top: -120px;
+        font-family: "Amita", cursive;
+        font-size: 24px;
+        color: #ffffff;
+      }
+      #topnav_moto {
+        position: relative;
+        top: 20px;
+        font-size: 14px;
+        font-style: italic;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #34495e;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 500;
+      }
+      nav a {
+        color: #ecf0f1;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      nav a:hover {
+        background-color: #2c3e50;
+      }
+      #active {
+        background-color: #2c3e50;
+      }
+
+      main {
+        padding: 30px 100px 50px;
+      }
+
+      h1 {
+        color: #e67e22;
+      }
+
+      .content {
+        text-align: center;
+      }
+      .content div {
+        margin-bottom: 50px;
+      }
+
+      .image-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .image-container img {
+        width: 500px;
+        height: 350px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .paragrapsDiv {
+        width: 80%;
+        padding: 10px 40px;
+        margin: 0 auto;
+      }
+
+      .paragrapsDiv p {
+        line-height: 30px;
+        text-align: left;
+        letter-spacing: 0.5px;
+      }
+
+      .padDiv {
+        color: #0084ff;
+        margin: 40px 0px 0px;
+      }
+
+      .padDiv p {
+        font-size: 18px;
+        margin-bottom: -5px;
+        font-weight: 600;
+        font-style: italic;
+        line-height: 1.15;
+        text-align: center;
+      }
+
+      footer {
+        background-image: url("https://cdn.shopify.com/s/files/1/0565/7431/2643/files/background.jpg?v=1641291483");
+        color: #000;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-section {
+        flex: 1;
+        margin: 20px;
+        margin-right: 30px;
+      }
+
+      h2 {
+        color: #3d9970;
+      }
+
+      .newsletter {
+        max-width: 300px;
+      }
+
+      .subscribe-form {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .subscribe-input {
+        flex: 1;
+        padding: 10px;
+        border: 0;
+        font-family: "Arial", sans-serif;
+      }
+      .subscribe-input:focus {
+        outline: 0;
+      }
+
+      .subscribe-button {
+        background-color: #3d9970;
+        color: white;
+        padding: 11px 20px;
+        border: none;
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+      }
+
+      .subscribe-button:hover {
+        background-color: #2ecc71;
+      }
+
+      .social-icons {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-icons li {
+        margin: 0 10px;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+        color: #333;
+        font-size: 28px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .social-icons a:hover {
+        color: #e67e22;
+      }
+
+      .copyright {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding-right: 30px;
+        }
+        #banshi_topnav_image {
+          margin-top: -10px;
+          width: 200px;
+          height: 100px;
+        }
+
+        #topnav_tag {
+          margin-left: 50px;
+          margin-top: -85px;
+          font-size: 18px;
+        }
+        #topnav_moto {
+          left: 10px;
+          font-size: 10px;
+        }
+        nav {
+          flex-direction: column;
+          align-items: center;
+          position: unset;
+        }
+        h1 {
+          font-size: 18px;
+        }
+
+        nav a {
+          margin: 2px 0;
+        }
+
+        main {
+          padding: 20px 20px 50px;
+        }
+
+        .content div {
+          margin-bottom: 30px;
+        }
+
+        .image-container img {
+          width: 280px;
+          height: 190px;
+        }
+
+        .paragrapsDiv {
+          width: 97%;
+          padding: 10px 0px;
+        }
+
+        .paragrapsDiv p {
+          line-height: 23px;
+          font-size: 14px;
+        }
+
+        .padDiv {
+          margin: 25px 0px 0px;
+        }
+
+        .padDiv p {
+          font-size: 16px;
+          margin-bottom: -8px;
+        }
+
+        footer {
+          padding: 10px 0;
+        }
+
+        .footer-section {
+          margin-bottom: 0;
+          flex: 1;
+        }
+        .footer-section p {
+          font-size: 14px;
+        }
+
+        .footer-section h2 {
+          font-size: 18px;
+        }
+
+        .newsletter {
+          max-width: 280px;
+          margin-left: 25px;
+        }
+
+        .subscribe-input {
+          width: 90px;
+          padding: 8px;
+        }
+
+        .subscribe-button {
+          font-size: 14px;
+          padding: 8px 12px;
+        }
+
+        .social-icons {
+          margin-top: 5px;
+        }
+
+        .social-icons a {
+          font-size: 22px;
+        }
+
+        .copyright {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="../images/banshi-header-removebg-preview.png"
+        id="banshi_topnav_image"
+      />
+      <p id="topnav_tag">श्री कृष्ण पदावली</p>
+      <p id="topnav_moto">Your Divine Journey Begins Here</p>
+    </header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../bhakti-pad.html">Bhakti Pad</a>
+      <a href="../bhajan-sangrah.html">Bhajan Sangrah</a>
+      <a href="../prem-sarita.html" id="active">Prem Sarita</a>
+      <a href="../daily-activities.html">Daily Activities</a>
+    </nav>
+
+    <main>
+      <div class="content">
+        <div>
+          <h1>प्रियतम की डगर</h1>
+        </div>
+        <div class="image-container">
+          <img src="../images/krishna2.jpeg" alt="Lord Krishna" />
+        </div>
+        <div class="paragrapsDiv">
+          <p>
+            मुझे नहीं ज्ञात कि आप किसी से प्रेम करते हैं अथवा नहीं, परंतु इतना अवश्य है कि प्रेम करना हम सब जानते हैं। प्रेम सबके भीतर है, परंतु एक भूल जो मैं और आप करते हैं कि हम प्रेम तो करते हैं किंतु किसी सुपात्र से नहीं किसी कुपात्र से हम प्रेम कर बैठते हैं। हमें प्रेम किससे करना चाहिए तथा किससे नहीं, इसी का हम चयन नहीं कर पाते हैं तो कैसे कह सकते हैं कि हमारा प्रेम वास्तविक है या नहीं या ऐसे ही कुछ भी किये जा रहे हैं मैं और आप। प्रेम वही है जो योग्य व्यक्ति से किया जाए अन्यथा प्रेम की परिभाषा ही कुछ विपरीत हो जाएगी। वैसे तो प्रेम किससे किया जाए यह तो वही बता सकता है जिसने कभी सुपात्र से प्रेम किया हो इस कलिकाल में यदि कोई सत्य में प्रेम करने योग्य है तो वह स्वयं प्रेम के स्वरूप सच्चिदानंद श्री कृष्ण हैं।       
+          </p>
+          <div class="padDiv">
+            <p>जो प्रेम करौ जगत सौं, फिर पड़े पछताई</p>
+            <p>जोड़ प्रेम कौ नाता गिरधर सौं, ऐसो प्रेम सुखदाई</p>
+            <p>ऐ मन! वह प्रेम 'दिव्य' होइ जाई।</p>
+          </div>
+          <p>
+            यदि प्रेम कृष्ण से किया हो फिर वह प्रेम, प्रेम नहीं रहता, वह प्रेम दिव्य हो जाता है। और जब एक बार उनसे प्रेम हो जाता है फिर किसी अन्य का आश्रय नहीं रह जाता फिर तो लाली मेरे लाल की, जित देखूँ तित लाल। अब तो जहाँ देखूँ तहाँ श्याम। हर व्यक्ति में, हर स्थान में, मन के हर भाव में केवल गिरिधर ही रमण करते हुए दिखायी पड़ते हैं। एक क्षण भर के लिए भी यदि वह दिव्य छवि ओझल हो जाए तो हृदय मचल जाता है। नीरस सा लगने लगता है प्रत्येक स्थान, प्रत्येक वस्तु । उनके सिवाय फिर कोई अभिलाषा शेष नहीं रह जाती है। वहीं जीवन के एकमात्र उद्‌देश्य प्रतीत होते है और हैं भी। खोल लीजिए मन के नेत्र और देखिए कि मेरे और आपके परम आश्रय वो श्री हरि ही तो हैं। जहाँ कहीं भी दृष्टि जाए वहाँ अपने प्रियतम, अपने प्रेमास्पद की अद्‌‌भुत काया ही दिखायी पड़े वह प्रेम है और उनकी तो आभा ही ऐसी है जो उनसे प्रेम करने पर विवश कर देती है जीव को। वो तो संसार में कोई अतिशय मूढ़, अज्ञान से भरा हुआ व्यक्ति ही होगा जिसे उनसे प्रेम न हो। एक भक्त का अपने प्रभु के प्रति प्रेम तो इतना परिशुद्ध, इतना पवित्र होता है कि संसार का प्रत्येक सुख, वस्तु, व्यक्ति उसे सब अपने प्रभु के सम्मुख नीरस दिखाई पड़ता है। चाहे कुछ भी कहता रहे संसार पर उस ओर कोई विशेष ध्यान नहीं जाता है भक्त का अपने प्रभु के अतिरिक्त। कदाचित मीरा ने इसलिए ही कहा होगा :-
+          </p>
+          <div class="padDiv">
+            <p>माई री! मैं तो लियो गोविन्दो मोल</p>
+            <p>कोई कहे चान, कोई कहे चौड़े, लियो री बजता ढोल</p>
+            <p>कोई कहे मुन्हगो, कोई कहे सुहगो, लियो री तराजू रे तोल</p>
+            <p>कोई कहे कारो, कोई कहे गोरो, लियो री आख्या खोल।</p>
+          </div>
+          <p>
+            फिर कोई भेद नहीं दिखता कि वो कारें हैं या गोरे, शुभ-अशुभ, मान - अपमान आदि के बिषयवाद से परे हटते जाते हैं प्रभु के भक्त। प्रेम न तो सिखाया जाता है, न ही सिखा जाता है। अन्य क्रियाएँ आपको सीखनी पड़ती हैं। अन्य को देखकर आप झगड़ा करना सीख जाते है, कटु शब्द बोलना सीख जाते हैं, परन्तु प्रेम को अन्य किसी से देखकर नहीं सीखा जा सकता। प्रेम करने की कोई अन्य विधि नहीं है। प्रेम तो स्वत: ही होता है। समय के साथ जो भाव फीका न पड़े उसका नाम प्रेम है। ऐसा नहीं है कि आज प्रेम हो और कल नहीं। प्रेम की तो नित्य प्रति अभिवृद्धि होती जाती है।
+          </p>
+          <div class="padDiv">
+            <p>खर्च न खूटे, चोर न लूटे दिन-दिन बढ़त सवायो</p>
+            <p>पायो जी मैनें राम रतन धन पायो।</p>
+          </div>
+          <p>
+            फिर तो दिन-दिन बढ़ता रहता है प्रेम कभी नये-नये भावों के साथ और कभी विशुद्ध विचारों से। एक बार प्रेम करके तो देखिए कृष्ण से अनिर्वचनीय और परम आनन्द प्राप्त होगा आपको। विश्वास कीजिए, इसी प्रेम के मार्ग पर चलकर पहुंच जाऐंगे मैं और आप कभी-न- कभी अपने प्रियतम की डगर तक । यह डगर इतनी सरल भी नहीं है और इतनी दुष्कर भी नहीं है। इस डगर तक का सफर थोड़ा लम्बा है। कबीर जी की पंक्ति है-
+          </p>
+          <div class="padDiv">
+            <p>लम्बा मारग दूरि घर, विकट पंथ बहु मार</p>
+            <p>कहौ संतौ क्यूं पाइये, दुर्लभ हरि दीदार।</p>
+          </div>
+          <p>
+            यह बात अपने अनुभव से ही कही होगी कबीर जी ने कि चलते-चलते न जाने कितनी रूकावटें, अस्थिरता जीवन में आए। हो सकता है बहुत ही मानसिक अस्वस्थता से भी गुजरना पड़े, बहुत कष्ट, विकट संकटो का सामना करना पड़े, परन्तु उतने ही अनुभव, दृढ़ता, चारित्रिक सबलता मैं और आप पाते चलेंगे। अपने सौन्दर्य को और भी निखारते चलेंगे मैं और आप। शीघ्रता न हो उस परम विश्राम तक पहुंचने की। हर क्षण का आनन्द लेते हुए आगे बढ़ना है मुझे और आपको इस पथ पर। हो सकता है कि इस सफर में आपको वो आनन्द मिले जो शायद मंजिल में भी न मिले। हर क्षण को जीते हुए चलना है, हर क्षण कुछ सीखते हुए चलना है, इसलिए शीघ्रता न कीजिएगा।
+          </p>
+          <p>
+            मंजिल को खोजने से पहले स्वयं को खोजना होगा क्योंकि हम भी तो खोए हुए ही हैं। कदाचित हम प्रभु को खोजने में असमर्थ हो सकते है परन्तु स्वयं को तो खोज ही सकते हैं। किंतु प्रश्न यह है कि स्वयं को खोजना कहाँ है?  अपने मन के भीतर खोजिए आप स्वयं को और विचार कीजिए क्या सत्य में जो आपका मन विचार करता है क्या आप वैसे ही हैं, वैसा ही आपका स्वभाव है। मन की उस निरन्तर गतिशील स्थिति का विचार कीजिए जो स्वयं को स्वयं से विलग कर देती है, जिधर चाहे उधर जीव को ले जाती है। मन जिस प्रकार चाहे उस प्रकार न जाने कितने ही छल-प्रपंचो से छलता है वह मुझे और आपको। और न जाने कितने अप्रिय, अशुद्ध, वीभत्स विचारों का नित्य प्रति अनुभव कराता है यह मन मुझे और आपको। मैं और आप इसी मन द्वारा रचित उलझनो में सदा खोए रहते हैं। सिवाय स्वयं को खोजने के प्रयास के और अधिक स्वयं को खोते जाते हैं हम। समय के साथ-साथ दारुण स्वरूप ले लेता है यह मन और पूर्व से भी अधिक सामर्थ्य के साथ हावी होने लगता है मेरे और आपके ऊपर।
+          </p>
+          <div class="padDiv">
+            <p>मैं का जानुं देव मैं का जानु,</p>
+            <p>मन माया के हाथि विकानुं,</p>
+            <p>चंचल मनवा चहु दिसि धावै,</p>
+            <p>जिभ्या इंद्री हाथि न आवै।</p>
+          </div>
+          <p>
+            माया वस्तुतः क्या है? यह मन ही तो माया है, इसलिए प्रभु ने हमें बिसराया है। इसलिए उलझते न चले जाइएगा मन के बनाए हुए जाल में। मन के कुत्सित विचारों पर ध्यान मत दीजिएगा और मन के दुर्गुणों को दुराइएगा मत अपितु संभालने का प्रयास कीजिएगा। इस प्रकार आप संभव हो जायेंगे इस माया रूपी मन से स्वयं को निकालने में। इसलिए पहले स्वयं को खोजिएगा, जब आप स्वयं को खोज पाने में सफल हो जाते हैं तब प्रभु स्वयं आपको खोज लेते हैं। विचार कीजिएगा।
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section contact-info">
+          <h2>Contact Us</h2>
+          <p>Email: info@krishnapadawali.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h2>Newsletter</h2>
+          <p>Subscribe to receive divine updates and inspiration.</p>
+          <div class="subscribe-form">
+            <input
+              type="email"
+              class="subscribe-input"
+              placeholder="Enter your email"
+            />
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h2>Connect with Us</h2>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-codepen"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © 2023 Krishna Padawali by Vishal. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>

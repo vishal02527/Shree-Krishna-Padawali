@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>उग्र नहीं विनम्र बनिये</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amita&family=Arya&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d74f12bccc.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url("https://media.istockphoto.com/id/1346789574/vector/abstract-neutral-background-white-geometric-mosaic-smooth-triangular-wallpaper-minimal.jpg?s=612x612&w=0&k=20&c=kdgQJIUDRT9VzBbfrva_FoKd5XdGRds1_bYVznegQLI=");
+        color: #333;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+      h1::selection,
+      p::selection {
+        background-color: #fae2b5;
+      }
+      header {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #banshi_topnav_image {
+        margin: 0px;
+        margin-top: -30px;
+        width: 275px;
+        height: 150px;
+      }
+
+      #topnav_tag {
+        margin-left: 65px;
+        margin-top: -120px;
+        font-family: "Amita", cursive;
+        font-size: 24px;
+        color: #ffffff;
+      }
+      #topnav_moto {
+        position: relative;
+        top: 20px;
+        font-size: 14px;
+        font-style: italic;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #34495e;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 500;
+      }
+      nav a {
+        color: #ecf0f1;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      nav a:hover {
+        background-color: #2c3e50;
+      }
+      #active {
+        background-color: #2c3e50;
+      }
+
+      main {
+        padding: 30px 100px 50px;
+      }
+
+      h1 {
+        color: #e67e22;
+      }
+
+      .content {
+        text-align: center;
+      }
+      .content div {
+        margin-bottom: 50px;
+      }
+
+      .image-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .image-container img {
+        width: 500px;
+        height: 350px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .paragrapsDiv {
+        width: 80%;
+        padding: 10px 40px;
+        margin: 0 auto;
+      }
+
+      .paragrapsDiv p {
+        line-height: 30px;
+        text-align: left;
+        letter-spacing: 0.5px;
+      }
+
+      .padDiv {
+        color: #0084ff;
+        margin: 40px 0px 0px;
+      }
+
+      .padDiv p {
+        font-size: 18px;
+        margin-bottom: -5px;
+        font-weight: 600;
+        font-style: italic;
+        line-height: 1.15;
+        text-align: center;
+      }
+
+      footer {
+        background-image: url("https://cdn.shopify.com/s/files/1/0565/7431/2643/files/background.jpg?v=1641291483");
+        color: #000;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-section {
+        flex: 1;
+        margin: 20px;
+        margin-right: 30px;
+      }
+
+      h2 {
+        color: #3d9970;
+      }
+
+      .newsletter {
+        max-width: 300px;
+      }
+
+      .subscribe-form {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .subscribe-input {
+        flex: 1;
+        padding: 10px;
+        border: 0;
+        font-family: "Arial", sans-serif;
+      }
+      .subscribe-input:focus {
+        outline: 0;
+      }
+
+      .subscribe-button {
+        background-color: #3d9970;
+        color: white;
+        padding: 11px 20px;
+        border: none;
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+      }
+
+      .subscribe-button:hover {
+        background-color: #2ecc71;
+      }
+
+      .social-icons {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-icons li {
+        margin: 0 10px;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+        color: #333;
+        font-size: 28px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .social-icons a:hover {
+        color: #e67e22;
+      }
+
+      .copyright {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding-right: 30px;
+        }
+        #banshi_topnav_image {
+          margin-top: -10px;
+          width: 200px;
+          height: 100px;
+        }
+
+        #topnav_tag {
+          margin-left: 50px;
+          margin-top: -85px;
+          font-size: 18px;
+        }
+        #topnav_moto {
+          left: 10px;
+          font-size: 10px;
+        }
+        nav {
+          flex-direction: column;
+          align-items: center;
+          position: unset;
+        }
+        h1 {
+          font-size: 18px;
+        }
+
+        nav a {
+          margin: 2px 0;
+        }
+
+        main {
+          padding: 20px 20px 50px;
+        }
+
+        .content div {
+          margin-bottom: 30px;
+        }
+
+        .image-container img {
+          width: 280px;
+          height: 190px;
+        }
+
+        .paragrapsDiv {
+          width: 97%;
+          padding: 10px 0px;
+        }
+
+        .paragrapsDiv p {
+          line-height: 23px;
+          font-size: 14px;
+        }
+
+        .padDiv {
+          margin: 25px 0px 0px;
+        }
+
+        .padDiv p {
+          font-size: 16px;
+          margin-bottom: -8px;
+        }
+
+        footer {
+          padding: 10px 0;
+        }
+
+        .footer-section {
+          margin-bottom: 0;
+          flex: 1;
+        }
+        .footer-section p {
+          font-size: 14px;
+        }
+
+        .footer-section h2 {
+          font-size: 18px;
+        }
+
+        .newsletter {
+          max-width: 280px;
+          margin-left: 25px;
+        }
+
+        .subscribe-input {
+          width: 90px;
+          padding: 8px;
+        }
+
+        .subscribe-button {
+          font-size: 14px;
+          padding: 8px 12px;
+        }
+
+        .social-icons {
+          margin-top: 5px;
+        }
+
+        .social-icons a {
+          font-size: 22px;
+        }
+
+        .copyright {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="../images/banshi-header-removebg-preview.png"
+        id="banshi_topnav_image"
+      />
+      <p id="topnav_tag">श्री कृष्ण पदावली</p>
+      <p id="topnav_moto">Your Divine Journey Begins Here</p>
+    </header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../bhakti-pad.html">Bhakti Pad</a>
+      <a href="../bhajan-sangrah.html">Bhajan Sangrah</a>
+      <a href="../prem-sarita.html" id="active">Prem Sarita</a>
+      <a href="../daily-activities.html">Daily Activities</a>
+    </nav>
+
+    <main>
+      <div class="content">
+        <div>
+          <h1>उग्र नहीं विनम्र बनिये</h1>
+        </div>
+        <div class="image-container">
+          <img src="../images/krishna3.jpeg" alt="Lord Krishna" />
+        </div>
+        <div class="paragrapsDiv">
+          <p>
+            प्रेमी सदैव वह कार्य करता है जिसमें प्रियतम का सुख निहित हो, जो उसके
+            प्रेमास्पद को प्रिय लगे। वह सदा उस कार्य को करने से बचता है जो उसके
+            प्रेमास्पद को न रूचता हो। वह अपने स्वार्थ को तज कर, अपने प्रियतम की
+            आंकाक्षाओं को अधिक महत्व देता है। उसे छोटी-छोटी बातों की चिंता होने
+            लगती है कि उन्हें क्या पसंद होगा क्या नहीं? कहीं भूल से भी हमने कोई
+            ऐसा कृत्य तो नहीं कर दिया जो उनको हमसे दूर कर दे? हम ऐसा क्या करें
+            जो कृष्ण को आनन्द दे? हम किस प्रकार का आचरण करें जिससे कृष्ण हमसे
+            प्रसन्न हो जाएँ? केवल यही विचार एक प्रेमी और भक्त के हृदय में रहते
+            हैं। केवल उनके सुख का विचार। हम जैसे भी कृष्ण को प्रिय लगते हो बस
+            वैसा ही हो जाने की इच्छा मन में रहती है।
+          </p>
+          <div class="padDiv">
+            <p>यह जीवन अब तुम्हारा हरि जी</p>
+            <p>जैसा चाहे बना लो</p>
+            <p>हमने तुम संग नेह है जोड़ा</p>
+            <p>तुम भी हमें अपना लो।</p>
+          </div>
+          <p>
+            भक्त कोई कार्य करता है तो यह कहकर कि जैसी गोविन्द की इच्छा, और
+            गोविन्द जब कृपा करते हैं तो यह कहकर जैसी भक्त की इच्छा । इस प्रकार
+            दोनों एक-दूसरे की इच्छा का परस्पर ध्यान रखते हैं। भक्त बिना गोविन्द
+            नहीं और गोविन्द बिना भक्त नहीं। दोनों ही एक-दूसरे के पूरक है। अपने
+            प्रभु की इच्छापूर्ति हेतु कैकेयी जनम जनम का अपयश अपने नाम करने को
+            सज्य हो गई थीं, वरना कौन माता अपने पुत्र को वन में वास करने के लिए
+            भेजती है। आज भी कोई अपनी पुत्री का नाम कैकेयी नहीं रखता है, परन्तु
+            यही प्रभु की इच्छा है ऐसा मानकर सभी निंदा स्वीकार कर ली थी माता
+            कैकेयी ने । प्रभु की इच्छा के सन्मुख नतमस्तक हो जाना भी प्रेम का
+            सबसे बड़ा अलंकारी गुण है।
+          </p>
+          <p>
+            न जाने कितने वर्ष, कितने जनम मैं और आप यूँ ही व्यर्थ की चिन्ताओ को
+            करते-करते बीता देते हैं। अरे! चिन्ता तो केवल हरि नाम की होनी चाहिए।
+          </p>
+          <div class="padDiv">
+            <p>चिंता तौ हरि नावं की, और न चिंता दास</p>
+            <p>जे कछु चितवैं राम बिन, सोइ काल को पास।</p>
+          </div>
+          <p>
+            चिंता करने के स्थान पर हम में से कोई भी यह बोध अपने मन को नहीं देता
+            कि अब तो संभल जा ऐ मन! अब तो तनिक अपने कल्याण के विषय में विचार कर।
+            अपने प्राण पति श्री कृष्ण की शरण में जाने का प्रयास कर। जिसे तु
+            वास्तविक सुख समझने की भूल कर रहा है, वो तो वास्तव में तेरे दुख का
+            मूल कारण हैं। अब तो इस माया के जंजाल से निकलने का कोई उपाय ढूँढ़। हरि
+            बिन यहाँ है ही कौन तेरा ? अब तो हरि नाम भज ले।
+          </p>
+          <div class="padDiv">
+            <p>रे मन! हरि का भजन कर, कर उनकी पूजा</p>
+            <p>ऐसे परम कृपालु, फिर न मिलेगा दूजा</p>
+            <p>चरण-कमल उनके पकड़ कर, सहृदय तु निहार</p>
+            <p>रे मन! राधे कृष्ण पुकार।</p>
+            <br />
+            <p>रे मन! जीवन जाल से, अब तो निकल बाहर</p>
+            <p>यह बन्धन भ्रम माया का, बाकि हरि सुख सागर</p>
+            <p>कितने हुए और कितने होंगे, जनम तेरे बेकार</p>
+            <p>रे मन! राधे कृष्ण पुकार।</p>
+          </div>
+          <p>
+            यूँ बोध कराते रहिएगा अपने मन को, यह एक साथ नहीं संभलेगा परन्तु
+            धीरे-धीरे संभलते-संभलते संभल जायेगा। क्या आपने कभी विचार किया है कि
+            कहीं निंदा, दुराग्रह, क्रोध, कपट जैसे दूषित विचार मेरे और आपके जीवन
+            को अपवित्र तो नहीं कर दे रहे हैं। कहीं इस प्रकार की उग्रता के कारण
+            मेरे और आपके व्यवहार में एक बड़ी हानि तो नहीं हो रही है। यदि ऐसा है
+            तो इसका निवारण करना अनिवार्य हो जाता है, क्योंकि शारीरिक अस्वस्थता
+            से तो मैं और आप औषधियों के द्वारा मुक्त हो सकते हैं, परन्तु इस
+            प्रकार के दुराचरण से मुक्त हो जाना उतना संभव नहीं है। इसकी तो केवल
+            एक औषधि है और वह है 'विनम्रता'। विनम्रता अर्थात 'अहम शून्यता' । जब
+            अंहकार शून्य हो जाता है तब विनम्रता आती है।
+          </p>
+          <div class="padDiv">
+            <p>रे मन! कपट, छल छोड़ दे, तज बिष सम अभिमान</p>
+            <p>बिन तजे न पायेगा, भगत शिरोमणी भगवान</p>
+            <p>भज माधव मुकुन्द मुरारी, भूल के संसार</p>
+            <p>रे मन! राधे कृष्ण पुकार।</p>
+          </div>
+          <p>
+            विनम्र हो जाइये, फिर इस प्रकार के दुर्गुणों से हमारा आकर्षण स्वत: ही
+            समाप्त हो जायेगा। बस यह विनम्रता आ जाए फिर धीरे-धीरे सबके प्रति आदर,
+            निष्कपटता, प्रेम जैसे उच्चिष्ठ गुण मेरे और आपके हृदय में आने लगेंगे।
+            जब एक बार विनम्रता आ जायेगी तो आपसे उम्र में छोटा व्यक्ति भी आपके
+            लिए सम्माननीय हो जायेगा। विनम्रता स्वभाव में आ जाने पर छोटे-बड़े,
+            गरीब- अमीर, ऊंच-नीच आदि का भेद फिर नहीं रहता है। अज्ञानी व्यक्ति भी
+            आपके लिए उतना ही आदर के पात्र हो जायेगा जितना कोई जानी व्यक्ति होता
+            है।
+          </p>
+          <p>
+            परन्तु आजकल विनम्रता दिखाता ही कौन है? भाई! कोई प्रधानमन्त्री हो या
+            न हो बस उसके कार्यालय में कार्य करने वाला कोई साधारण व्यक्ति भी हो न
+            तो उसके भी तेवर किसी महाराजधिराज से कम नहीं होते हैं। इसलिए विनम्रता
+            कुछ ही मनुष्यों में आपको देखने को मिलेगी, परन्तु हाँ उग्रता हम सब
+            में व्याप्त है। यदि विनम्रता को और अधिक जानना, समझना चाहते हैं आप तो
+            देखिए अपने श्री कृष्ण को। उन जैसा विनम्र स्वभाव भला किसका हो सकता
+            है, इतना विनम्र स्वभाव कि युद्धिष्ठिर के राजसूय यज में झूठे पात्र
+            उठाने में भी वह संकोच नहीं करते हैं।
+          </p>
+          <div class="padDiv">
+            <p>राजसूय यज्ञ युद्धिष्ठिर कीन्हा</p>
+            <p>तामे झूठ उठाई। हरे कृष्णा!</p>
+          </div>
+          <p>
+            प्रेम के वश में विदुरानी के सूखे छिलके भी उन्हें छप्पन भोग से प्रतीत
+            होते हैं। उन्होंने तो द्वार पर आए सुदामा को भी यह महसूस नहीं होने
+            दिया कि वह दीन-हीन है। ऐसा सम्मान, ऐसा स्वागत सुदामा का मेरे प्रभु
+            ने किया जो कदाचित बड़े-बड़े राजाओं के भाग्य में भी नहीं था। विनम्रता
+            का ऐसा सुन्दर उदाहरण भला दूसरा कौन प्रस्तुत कर सकता है। यह तो केवल
+            कृष्ण ही कर सकते हैं।
+          </p>
+          <div class="padDiv">
+            <p>ऐसी लाल तुझ बिनु कउनु करै</p>
+            <p>गरीब निवाजु गुसाईयाँ, मेरा माथै छत्र धरै</p>
+            <p>जाकी छोति जगत कउ लागै, ता पर तुहीं ढ़रै</p>
+            <p>नीचउ ऊंच करै मेरा गोविन्द, काहु ते न डरै</p>
+            <p>नामदेव कबीर तिलोचन सधना सैनु तरै</p>
+            <p>कहै रविदास सुनहु रे संतहु हरिजीउ ते सभै सरै।</p>
+          </div>
+          <p>
+            अब बताइये, क्या ऐसी विनम्रता कभी मुझमें और आपमें हो भी सकती है। अरे!
+            उम्र मे छोटा व्यक्ति तो छोड़िए, कोई बड़ा भी यदि हमारे सन्मुख खड़ा हो
+            तो उसके लिए भी मेरे और आप के भीतर कोई विशेष आदर नहीं होता है।
+            विनम्रता तो बहुत दूर की बात है। इन्हीं दुर्गुणों के कारण हम मनुष्य
+            इतने निर्बल, असहाय एंव दृष्टिहीन हो गए हैं कि हमें अपने कल्याण का
+            मार्ग भी दिखायी नहीं देता है। इन दुर्गुणों से दूर हटने का हमें
+            प्रयास करना चाहिए और अपने भीतर सतोगुण का विकास करना चाहिए। और इसके
+            लिए सर्वप्रथम अपनी उग्रता का त्याग करना अति आवश्यक
+            है। विचार कीजिएगा।
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section contact-info">
+          <h2>Contact Us</h2>
+          <p>Email: info@krishnapadawali.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h2>Newsletter</h2>
+          <p>Subscribe to receive divine updates and inspiration.</p>
+          <div class="subscribe-form">
+            <input
+              type="email"
+              class="subscribe-input"
+              placeholder="Enter your email"
+            />
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h2>Connect with Us</h2>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-codepen"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © 2023 Krishna Padawali by Vishal. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
